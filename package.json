@@ -1,14 +1,10 @@
 {
-  "name": "@fentosv/react-confirm-toast",
+  "name": "react-confirm-toast",
   "version": "1.0.0",
   "description": "Creates a toast notification which allows you to confirm or reject the execution of a function.",
   "author": {
     "name": "Fentos",
     "email": "fentos.dev@gmail.com"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/fentosv",
-    "access": "public"
   },
   "repository": {
     "type": "git",
@@ -42,7 +38,9 @@
     "react confirm toast",
     "react modal",
     "react popup",
-    "react popup confirm"
+    "react popup confirm",
+    "fentos",
+    "fentosv"
   ],
   "devDependencies": {
     "@babel/core": "^7.16.0",
