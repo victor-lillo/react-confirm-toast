@@ -1,0 +1,81 @@
+{
+  "name": "@fentosv/react-confirm-toast",
+  "version": "1.0.0",
+  "description": "Creates a toast notification which allows you to confirm or reject the execution of a function.",
+  "author": {
+    "name": "Fentos",
+    "email": "fentos.dev@gmail.com"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/fentosv",
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fentosv/react-confirm-toast.git"
+  },
+  "homepage": "https://github.com/fentosv/react-confirm-toast",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "npm run clean && rollup -c"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
+  "keywords": [
+    "react",
+    "react-toast",
+    "react-component",
+    "react component",
+    "notifications",
+    "toast",
+    "modal",
+    "popup",
+    "dialog",
+    "alert",
+    "confirm",
+    "react confirm",
+    "react confirm toast",
+    "react modal",
+    "react popup",
+    "react popup confirm"
+  ],
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.4",
+    "@babel/preset-react": "^7.16.0",
+    "@babel/preset-typescript": "^7.16.0",
+    "@mdx-js/react": "^2.1.2",
+    "@rollup/plugin-commonjs": "^22.0.1",
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "@rollup/plugin-typescript": "^8.3.0",
+    "@testing-library/react": "^13.3.0",
+    "@types/react": "^18.0.15",
+    "babel-loader": "^8.2.3",
+    "css-loader": "^6.5.1",
+    "html-webpack-plugin": "^5.5.0",
+    "identity-obj-proxy": "^3.0.0",
+    "postcss": "^8.4.14",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rollup": "^2.60.0",
+    "rollup-plugin-dts": "^4.0.1",
+    "rollup-plugin-postcss": "^4.0.1",
+    "sass": "^1.43.5",
+    "sass-loader": "^13.0.2",
+    "style-loader": "^3.3.1",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "classnames-creator": "^1.0.6",
+    "react-icons": "^4.4.0"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
