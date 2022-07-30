@@ -6,6 +6,7 @@ import s from './ConfirmToast.module.scss'
 interface Props {
     asModal?: boolean,
     children: React.ReactNode,
+    childrenClassName?: string,
     showCloseIcon?: boolean,
     customCancel?: string,
     customConfirm?: string,
@@ -18,6 +19,7 @@ interface Props {
 export default function ConfirmToast({
     asModal = false,
     children,
+    childrenClassName,
     showCloseIcon = true,
     customCancel = 'Cancel',
     customConfirm = 'Ok',
@@ -70,7 +72,11 @@ export default function ConfirmToast({
 
         <div
             onClick={() => setShowConfirmToast(true)}
-            className={s[`${theme}_theme`]}
+            className={classnames(
+                s[`${theme}_theme`],
+                childrenClassName
+            )
+            }
         >
             {showConfirmToast &&
                 <Wrapper asModal={asModal}>
