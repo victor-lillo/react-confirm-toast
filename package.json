@@ -1,6 +1,6 @@
 {
   "name": "react-confirm-toast",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Creates a toast notification which allows you to confirm or reject the execution of a function.",
   "author": {
     "name": "Fentos",

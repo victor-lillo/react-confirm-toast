@@ -30,7 +30,7 @@ import {ConfirmToast} from 'react-confirm-toast';
 | Name         | Value  | Default    | Required | Description |
 | :---: | :---: | :---: | :---: | --- |
 | **asModal** | `boolean` | `false` |  | Toast will be displayed as a modal element, in the center of the viewport and darkening the background. |
-| **childrenClassname** | `string` | `none`|   | Add a class to the children element. |
+| **childrenClassName** | `string` | `none`|   | Add a class to the children element. |
 | **customCancel** | `string` | `Cancel`|   | Sets the cancel button message. |
 | **customConfirm** | `string` | `Ok` |   | Sets the confirm button message. |
 | **customFunction** | `Function` | `none` |  ✅ | **Required**. Defines the function to confirm. |
@@ -81,7 +81,7 @@ const myFunction =()=>{
 
 <ConfirmToast
     asModal={true}
-    childrenClassname='margin-top-10'
+    childrenClassName='margin-top-10'
     customCancel='Reject'
     customConfirm='Confirm'
     customFunction={myFunction}
