@@ -4,6 +4,9 @@
 
 Creates a toast notification which allows you to confirm or reject the execution of a function. 
 
+Check the [documentation web](https://react-confirm-toast-docs.vercel.app/) for a live demo.
+
+
 ## Installation
 
 Install using npm:
