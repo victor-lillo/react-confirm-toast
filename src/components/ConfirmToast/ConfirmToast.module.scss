@@ -50,7 +50,6 @@
     --confirm-toast-btn-hover: 1.05;
 }
 
-
 .container {
     position: fixed;
     background-color: var(--confirm-toast-bg);
@@ -59,6 +58,7 @@
     gap: 1rem;
     border-radius: 0.5rem;
     user-select: none;
+    box-shadow: 0px 0px 10px 2px #4343434c;
 }
 
 .title_wrapper {
@@ -72,7 +72,6 @@
 
 .close {
     color: var(--confirm-toast-icon-color);
-
     font-size: 1.6rem;
     stroke-width: 2px;
 
@@ -155,7 +154,6 @@
     margin-right: auto;
     animation: toast-in-modal .7s;
 }
-
 
 @keyframes toast-in-right {
     from {
