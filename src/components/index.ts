@@ -1,1 +1,1 @@
-export { default as ConfirmToast } from "./ConfirmToast";
+export { default as ConfirmToast } from './ConfirmToast'

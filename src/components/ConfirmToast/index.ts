@@ -1,1 +1,1 @@
-export { default } from './ConfirmToast';
+export { default } from './ConfirmToast'
