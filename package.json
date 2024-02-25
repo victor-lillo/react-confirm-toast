@@ -1,6 +1,7 @@
 {
   "name": "react-confirm-toast",
   "version": "1.0.7",
+  "type": "module",
   "description": "Creates a toast notification which allows you to confirm or reject the execution of a function.",
   "author": {
     "name": "Víctor Lillo",
@@ -53,6 +54,12 @@
     "stylelint-config-standard": "36.0.0",
     "typescript": "5.3.3",
     "vite": "5.1.4"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/my-lib.js",
+      "require": "./dist/my-lib.umd.cjs"
+    }
   },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
