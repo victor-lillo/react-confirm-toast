@@ -8,9 +8,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/fentosv/react-confirm-toast.git"
+    "url": "git://github.com/victor-lillo/react-confirm-toast.git"
   },
-  "homepage": "https://github.com/fentosv/react-confirm-toast",
+  "homepage": "https://github.com/victor-lillo/react-confirm-toast",
   "license": "MIT",
   "scripts": {
     "clean": "rm -rf dist",
@@ -38,9 +38,7 @@
     "react confirm toast",
     "react modal",
     "react popup",
-    "react popup confirm",
-    "fentos",
-    "fentosv"
+    "react popup confirm"
   ],
   "devDependencies": {
     "@babel/core": "^7.16.0",
