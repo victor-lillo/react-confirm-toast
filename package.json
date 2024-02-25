@@ -7,12 +7,6 @@
     "name": "Víctor Lillo",
     "email": "fentos.dev@gmail.com"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/victor-lillo/react-confirm-toast.git"
-  },
-  "homepage": "https://github.com/victor-lillo/react-confirm-toast",
-  "license": "MIT",
   "scripts": {
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
@@ -67,6 +61,12 @@
     "dist"
   ],
   "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/victor-lillo/react-confirm-toast.git"
+  },
+  "homepage": "https://github.com/victor-lillo/react-confirm-toast",
+  "license": "MIT",
   "keywords": [
     "react",
     "react-toast",
