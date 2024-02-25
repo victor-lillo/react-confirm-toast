@@ -3,7 +3,7 @@
   "version": "1.0.7",
   "description": "Creates a toast notification which allows you to confirm or reject the execution of a function.",
   "author": {
-    "name": "Fentos",
+    "name": "Víctor Lillo",
     "email": "fentos.dev@gmail.com"
   },
   "repository": {
@@ -13,8 +13,46 @@
   "homepage": "https://github.com/victor-lillo/react-confirm-toast",
   "license": "MIT",
   "scripts": {
-    "clean": "rm -rf dist",
-    "build": "npm run clean && rollup -c"
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint . --ext ts,tsx --fix",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
+    "stylelint": "stylelint **/*.css",
+    "stylelint:fix": "stylelint **/*.css --fix",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-essentials": "7.6.17",
+    "@storybook/addon-interactions": "7.6.17",
+    "@storybook/addon-links": "7.6.17",
+    "@storybook/addon-onboarding": "1.0.11",
+    "@storybook/blocks": "7.6.17",
+    "@storybook/react": "7.6.17",
+    "@storybook/react-vite": "7.6.17",
+    "@storybook/test": "7.6.17",
+    "@types/node": "20.11.20",
+    "@types/react": "18.2.58",
+    "@types/react-dom": "18.2.19",
+    "@typescript-eslint/eslint-plugin": "7.0.2",
+    "@typescript-eslint/parser": "7.0.2",
+    "@vitejs/plugin-react": "4.2.1",
+    "classnames-creator": "1.0.6",
+    "eslint": "8.57.0",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "eslint-plugin-react-refresh": "0.4.5",
+    "eslint-plugin-storybook": "0.8.0",
+    "prettier": "3.2.5",
+    "storybook": "7.6.17",
+    "stylelint": "16.2.1",
+    "stylelint-config-standard": "36.0.0",
+    "typescript": "5.3.3",
+    "vite": "5.1.4"
   },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -39,40 +77,5 @@
     "react modal",
     "react popup",
     "react popup confirm"
-  ],
-  "devDependencies": {
-    "@babel/core": "^7.16.0",
-    "@babel/preset-env": "^7.16.4",
-    "@babel/preset-react": "^7.16.0",
-    "@babel/preset-typescript": "^7.16.0",
-    "@mdx-js/react": "^2.1.2",
-    "@rollup/plugin-commonjs": "^22.0.1",
-    "@rollup/plugin-node-resolve": "^13.3.0",
-    "@rollup/plugin-typescript": "^8.3.4",
-    "@testing-library/react": "^13.3.0",
-    "@types/react": "^18.0.15",
-    "babel-loader": "^8.2.3",
-    "css-loader": "^6.5.1",
-    "html-webpack-plugin": "^5.5.0",
-    "identity-obj-proxy": "^3.0.0",
-    "postcss": "^8.4.14",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "rollup": "^2.77.2",
-    "rollup-plugin-dts": "^4.2.2",
-    "rollup-plugin-postcss": "^4.0.1",
-    "sass": "^1.43.5",
-    "sass-loader": "^13.0.2",
-    "style-loader": "^3.3.1",
-    "tslib": "^2.4.0",
-    "typescript": "^4.7.4"
-  },
-  "dependencies": {
-    "classnames-creator": "^1.0.6",
-    "react-icons": "^4.4.0"
-  },
-  "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  }
+  ]
 }
