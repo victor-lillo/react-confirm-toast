@@ -58,8 +58,8 @@
   gap: 1rem;
   border-radius: 0.5rem;
   user-select: none;
-  box-shadow: 0px 0px 10px 2px #4343434c;
-  z-index: 9999999; //I hope you don't do this
+  box-shadow: 0 0 10px 2px #4343434c;
+  z-index: 9999999;
 }
 
 .title_wrapper {
@@ -96,12 +96,12 @@
 
   &.button_yes {
     color: var(--confirm-toast-btn-yes-color);
-    background-color: var(--confirm-toast-btn-yes-bg); //with this, we can use hover with filter
+    background-color: var(--confirm-toast-btn-yes-bg);
   }
 
   &.button_no {
     color: var(--confirm-toast-btn-no-color);
-    background-color: var(--confirm-toast-btn-no-bg); //with this, we can use hover with filter
+    background-color: var(--confirm-toast-btn-no-bg);
   }
 
   @media (hover: hover) {
@@ -144,10 +144,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgb(0 0 0 / 50%);
   color: white;
   transition: transform 0.3s;
-  z-index: 9999999; //I hope you don't do this
+  z-index: 9999999;
 }
 
 .modal-content {
