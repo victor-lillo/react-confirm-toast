@@ -4,14 +4,14 @@
   "description": "Creates a toast notification which allows you to confirm or reject the execution of a function.",
   "type": "module",
   "author": {
-    "name": "Fentos",
+    "name": "Víctor Lillo",
     "email": "fentos.dev@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/fentosv/react-confirm-toast.git"
+    "url": "git://github.com/victor-lillo/react-confirm-toast.git"
   },
-  "homepage": "https://github.com/fentosv/react-confirm-toast",
+  "homepage": "https://github.com/victor-lillo/react-confirm-toast",
   "license": "MIT",
   "scripts": {
     "build": "tsc && vite build",
@@ -50,9 +50,7 @@
     "react confirm toast",
     "react modal",
     "react popup",
-    "react popup confirm",
-    "fentos",
-    "fentosv"
+    "react popup confirm"
   ],
   "peerDependencies": {
     "react": "^18.2.0",
