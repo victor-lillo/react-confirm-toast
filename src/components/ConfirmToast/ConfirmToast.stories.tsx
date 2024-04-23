@@ -2,11 +2,29 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { fn } from '@storybook/test'
 
 import { ConfirmToast } from '.'
+import { useState } from 'react'
+
+function ConfirmToastStories() {
+  const [open, setOpen] = useState(false)
+  function customFunction() {
+    alert('Passed!')
+  }
+  return (
+    <>
+      <button onClick={() => setOpen(!open)}>External Click me!</button>
+      <ConfirmToast
+        showConfirmToast={open}
+        setShowConfirmToast={setOpen}
+        customFunction={customFunction}
+      ></ConfirmToast>
+    </>
+  )
+}
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 const meta = {
   title: 'Components/ConfirmToast',
-  component: ConfirmToast,
+  component: ConfirmToastStories,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
     layout: 'centered',
@@ -20,9 +38,8 @@ const meta = {
   args: {
     // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
     customFunction: fn(),
-    children: <button>Click me!</button>,
   },
-} satisfies Meta<typeof ConfirmToast>
+} satisfies Meta<typeof ConfirmToastStories>
 
 export default meta
 type Story = StoryObj<typeof meta>
