@@ -71,10 +71,17 @@
   font-weight: bold;
 }
 
-.close {
+.close-button {
+  border: 1px solid red;
+  background: none;
+  padding: 0;
+}
+
+.close-svg {
   color: var(--confirm-toast-icon-color);
   font-size: 1.6rem;
   stroke-width: 2px;
+  vertical-align: middle;
 
   @media (hover: hover) {
     &:hover {
