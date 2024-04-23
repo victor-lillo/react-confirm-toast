@@ -4,7 +4,7 @@ import { fn } from '@storybook/test'
 import { ConfirmToast } from '.'
 import { useState } from 'react'
 
-function ConfirmToastStories() {
+function ConfirmToastStories(args: Partial<unknown>) {
   const [open, setOpen] = useState(false)
   function customFunction() {
     alert('Passed!')
@@ -16,6 +16,7 @@ function ConfirmToastStories() {
         showConfirmToast={open}
         setShowConfirmToast={setOpen}
         customFunction={customFunction}
+        {...args}
       ></ConfirmToast>
     </>
   )
