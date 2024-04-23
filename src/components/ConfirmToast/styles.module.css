@@ -79,8 +79,6 @@
 
 .close-svg {
   color: var(--confirm-toast-icon-color);
-  font-size: 1.6rem;
-  stroke-width: 2px;
   vertical-align: middle;
 
   @media (hover: hover) {
