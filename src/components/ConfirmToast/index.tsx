@@ -77,7 +77,7 @@ export function ConfirmToast({
         <Wrapper asModal={asModal}>
           <div className={classes}>
             <div className={styles['title-wrapper']}>
-              <div className={styles.title}>{message}</div>
+              <p className={styles.title}>{message}</p>
               {showCloseIcon && (
                 <button
                   className={styles['close-button']}
