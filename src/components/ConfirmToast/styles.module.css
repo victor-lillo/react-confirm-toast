@@ -6,7 +6,7 @@
   display: flex;
 }
 
-.light_theme {
+.light {
   --confirm-toast-bg: white;
   --confirm-toast-msg-color: black;
   --confirm-toast-icon-color: crimson;
@@ -17,7 +17,7 @@
   --confirm-toast-btn-hover: 0.9;
 }
 
-.dark_theme {
+.dark {
   --confirm-toast-bg: #232323;
   --confirm-toast-msg-color: white;
   --confirm-toast-icon-color: crimson;
@@ -28,7 +28,7 @@
   --confirm-toast-btn-hover: 1.4;
 }
 
-.snow_theme {
+.snow {
   --confirm-toast-bg: #eaf1fd;
   --confirm-toast-msg-color: #5077be;
   --confirm-toast-icon-color: #3c598e;
@@ -39,7 +39,7 @@
   --confirm-toast-btn-hover: 1.15;
 }
 
-.lilac_theme {
+.lilac {
   --confirm-toast-bg: #f5ebfa;
   --confirm-toast-msg-color: black;
   --confirm-toast-icon-color: #ad5bd6;

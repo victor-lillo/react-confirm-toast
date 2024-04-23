@@ -72,7 +72,7 @@ export function ConfirmToast({
   return (
     <div
       onClick={() => setShowConfirmToast(true)}
-      className={clsx(styles[`${theme}_theme`], childrenClassName)}
+      className={clsx(styles[theme], childrenClassName)}
     >
       {showConfirmToast && (
         <Wrapper asModal={asModal}>
