@@ -27,7 +27,6 @@ export function ConfirmToast({
   message = 'Do you want to continue?',
   position = 'bottom-right',
   theme = 'light',
-  ...props
 }: Props) {
   function Wrapper({
     asModal,
