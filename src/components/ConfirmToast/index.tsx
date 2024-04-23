@@ -92,7 +92,7 @@ export function ConfirmToast({
 
             <div className={styles.buttons_container}>
               <button
-                className={`${styles.button} ${styles.button_yes}`}
+                className={`${styles.button} ${styles['button--yes']}`}
                 onClick={(e) => {
                   customFunction()
                   closeModal(e)
@@ -101,7 +101,7 @@ export function ConfirmToast({
                 {customConfirm}
               </button>
               <button
-                className={`${styles.button} ${styles.button_no}`}
+                className={`${styles.button} ${styles['button--no']}`}
                 onClick={(e) => {
                   closeModal(e)
                 }}

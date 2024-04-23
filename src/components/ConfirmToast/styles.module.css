@@ -94,12 +94,12 @@
   border: none;
   border-radius: 0.4rem;
 
-  &.button_yes {
+  &.button--yes {
     color: var(--confirm-toast-btn-yes-color);
     background-color: var(--confirm-toast-btn-yes-bg);
   }
 
-  &.button_no {
+  &.button--no {
     color: var(--confirm-toast-btn-no-color);
     background-color: var(--confirm-toast-btn-no-bg);
   }
