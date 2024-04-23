@@ -1,6 +1,6 @@
 .container,
-.title_wrapper,
-.buttons_container {
+.title-wrapper,
+.buttons-container {
   align-items: center;
   justify-content: center;
   display: flex;
@@ -62,7 +62,7 @@
   z-index: 9999999;
 }
 
-.title_wrapper {
+.title-wrapper {
   gap: 0.9rem;
 }
 
@@ -83,7 +83,7 @@
   }
 }
 
-.buttons_container {
+.buttons-container {
   gap: 0.6rem;
 }
 

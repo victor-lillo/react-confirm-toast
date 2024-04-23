@@ -76,7 +76,7 @@ export function ConfirmToast({
       {showConfirmToast && (
         <Wrapper asModal={asModal}>
           <div className={classes}>
-            <div className={styles.title_wrapper}>
+            <div className={styles['title-wrapper']}>
               <div className={styles.title}>{message}</div>
               {showCloseIcon && (
                 <button
@@ -94,7 +94,7 @@ export function ConfirmToast({
               )}
             </div>
 
-            <div className={styles.buttons_container}>
+            <div className={styles['buttons-container']}>
               <button
                 className={`${styles.button} ${styles['button--yes']}`}
                 onClick={(e) => {
