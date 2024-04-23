@@ -75,7 +75,7 @@ export function ConfirmToast({
     >
       {showConfirmToast && (
         <Wrapper asModal={asModal}>
-          <div className={classes}>
+          <output className={classes}>
             <div className={styles['title-wrapper']}>
               <p className={styles.title}>{message}</p>
               {showCloseIcon && (
@@ -112,7 +112,7 @@ export function ConfirmToast({
                 {customCancel}
               </button>
             </div>
-          </div>
+          </output>
         </Wrapper>
       )}
       {children}
