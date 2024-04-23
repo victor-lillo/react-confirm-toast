@@ -84,13 +84,11 @@ export function ConfirmToast({
                     closeModal(e)
                   }}
                 >
-                <CloseIcon
-                  aria-label='close modal'
-                  className={styles.close}
-                  onClick={(e) => {
-                    closeModal(e)
-                  }}
-                />
+                  <CloseIcon
+                    aria-label='close modal'
+                    className={styles.close}
+                  />
+                </button>
               )}
             </div>
 
