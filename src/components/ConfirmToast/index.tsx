@@ -3,7 +3,7 @@ import clsx from 'clsx'
 import { CloseIcon } from '../CloseIcon'
 import styles from './styles.module.css'
 
-interface Props {
+export interface ConfirmToastProps {
   asModal?: boolean
   childrenClassName?: string
   customCancel?: string
@@ -29,7 +29,7 @@ export function ConfirmToast({
   showCloseIcon = true,
   showConfirmToast,
   theme = 'light',
-}: Props) {
+}: ConfirmToastProps) {
   function Wrapper({
     asModal,
     children,
