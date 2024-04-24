@@ -6,16 +6,15 @@ import { useState } from 'react'
 
 function ConfirmToastStories(args: Partial<unknown>) {
   const [open, setOpen] = useState(false)
-  function customFunction() {
-    alert('Passed!')
-  }
+
   return (
     <>
       <button onClick={() => setOpen(!open)}>External Click me!</button>
       <ConfirmToast
         showConfirmToast={open}
         setShowConfirmToast={setOpen}
-        customFunction={customFunction}
+        // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
+        customFunction={fn}
         {...args}
       ></ConfirmToast>
     </>
@@ -32,14 +31,6 @@ const meta = {
   },
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],
-  // More on argTypes: https://storybook.js.org/docs/api/argtypes
-  // argTypes: {
-  //   backgroundColor: { control: 'color' },
-  // },
-  args: {
-    // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
-    customFunction: fn(),
-  },
 } satisfies Meta<typeof ConfirmToastStories>
 
 export default meta
