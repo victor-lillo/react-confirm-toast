@@ -1,5 +1,5 @@
 .container,
-.title-wrapper,
+.title-container,
 .buttons-container {
   align-items: center;
   justify-content: center;
@@ -18,7 +18,7 @@
   z-index: 9999999;
 }
 
-.title-wrapper {
+.title-container {
   gap: 0.9rem;
 }
 
