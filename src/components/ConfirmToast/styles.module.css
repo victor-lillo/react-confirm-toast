@@ -25,6 +25,7 @@
 .title {
   color: var(--confirm-toast-msg-color);
   font-weight: bold;
+  margin: 0;
 }
 
 .close-button {
