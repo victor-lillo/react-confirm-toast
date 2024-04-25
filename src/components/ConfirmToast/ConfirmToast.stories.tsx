@@ -1,7 +1,7 @@
-import type { Meta, StoryFn } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 import { fn } from '@storybook/test'
 
-import { ConfirmToast, ConfirmToastProps } from '.'
+import { ConfirmToast } from '.'
 import { useState } from 'react'
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
@@ -20,34 +20,45 @@ const meta = {
 } satisfies Meta<typeof ConfirmToast>
 
 export default meta
+type Story = StoryObj<typeof ConfirmToast>
 
-const Template: StoryFn<ConfirmToastProps> = (args) => {
-  const [open, setOpen] = useState(true)
-  return (
-    <>
-      <button onClick={() => setOpen(!open)}>External Click me!</button>
-      <ConfirmToast
-        {...args}
-        showConfirmToast={open}
-        setShowConfirmToast={setOpen}
-      />
-    </>
-  )
+const Template: Story = {
+  render: (args) => {
+    const [open, setOpen] = useState(false)
+    return (
+      <>
+        <button onClick={() => setOpen(true)}>External Click me!</button>
+        <ConfirmToast
+          {...args}
+          showConfirmToast={open}
+          setShowConfirmToast={setOpen}
+        />
+      </>
+    )
+  },
 }
 
-export const Default = Template.bind({})
+export const AsModal: Story = {
+  ...Template,
+  args: { asModal: true },
+}
 
-export const AsModal = Template.bind({})
-AsModal.args = { asModal: true }
+export const Light: Story = {
+  ...Template,
+  args: { theme: 'light' },
+}
 
-export const Light = Template.bind({})
-Light.args = { theme: 'light' }
+export const Dark: Story = {
+  ...Template,
+  args: { theme: 'dark' },
+}
 
-export const Dark = Template.bind({})
-Dark.args = { theme: 'dark' }
+export const Lilac: Story = {
+  ...Template,
+  args: { theme: 'lilac' },
+}
 
-export const Lilac = Template.bind({})
-Lilac.args = { theme: 'lilac' }
-
-export const Snow = Template.bind({})
-Snow.args = { theme: 'snow' }
+export const Snow: Story = {
+  ...Template,
+  args: { theme: 'snow' },
+}
