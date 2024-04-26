@@ -5,11 +5,11 @@ import styles from './styles.module.css'
 
 export interface ConfirmToastProps {
   asModal?: boolean
-  childrenClassName?: string
-  customCancel?: string
-  customConfirm?: string
+  className?: string
+  cancelButtonText?: string
+  confirmButtonText?: string
   customFunction: () => void
-  message?: string
+  toastText?: string
   position?: 'bottom-left' | 'bottom-right' | 'top-left' | 'top-right'
   setShowConfirmToast: React.Dispatch<React.SetStateAction<boolean>>
   showCloseIcon?: boolean
@@ -19,11 +19,11 @@ export interface ConfirmToastProps {
 
 export function ConfirmToast({
   asModal = false,
-  childrenClassName,
-  customCancel = 'Cancel',
-  customConfirm = 'Ok',
+  className,
+  cancelButtonText = 'Cancel',
+  confirmButtonText = 'Ok',
   customFunction,
-  message = 'Do you want to continue?',
+  toastText = 'Do you want to continue?',
   position = 'bottom-right',
   setShowConfirmToast,
   showCloseIcon = true,
@@ -70,7 +70,7 @@ export function ConfirmToast({
       [styles['modal-content']]: asModal,
     },
     styles[theme],
-    childrenClassName
+    className
   )
 
   return (
@@ -78,7 +78,7 @@ export function ConfirmToast({
       <Wrapper asModal={asModal}>
         <output className={classes}>
           <div className={styles['title-container']}>
-            <p className={styles.title}>{message}</p>
+            <p className={styles.title}>{toastText}</p>
             {showCloseIcon && (
               <button
                 className={styles['close-button']}
@@ -102,7 +102,7 @@ export function ConfirmToast({
                 closeModal(e)
               }}
             >
-              {customConfirm}
+              {confirmButtonText}
             </button>
             <button
               className={`${styles.button} ${styles['button--no']}`}
@@ -110,7 +110,7 @@ export function ConfirmToast({
                 closeModal(e)
               }}
             >
-              {customCancel}
+              {cancelButtonText}
             </button>
           </div>
         </output>
