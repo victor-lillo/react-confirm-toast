@@ -28,19 +28,21 @@ yarn add react-confirm-toast
 import { ConfirmToast } from 'react-confirm-toast'
 ```
 
-## Options
+## Properties
 
-|         Name          |                             Value                              |          Default           | Required | Description                                                                                             |
-| :-------------------: | :------------------------------------------------------------: | :------------------------: | :------: | ------------------------------------------------------------------------------------------------------- |
-|      **asModal**      |                           `boolean`                            |          `false`           |          | Toast will be displayed as a modal element, in the center of the viewport and darkening the background. |
-| **childrenClassName** |                            `string`                            |           `none`           |          | Add a class to the children element.                                                                    |
-|   **customCancel**    |                            `string`                            |          `Cancel`          |          | Sets the cancel button message.                                                                         |
-|   **customConfirm**   |                            `string`                            |            `Ok`            |          | Sets the confirm button message.                                                                        |
-|  **customFunction**   |                           `Function`                           |           `none`           |    ✅    | **Required**. Defines the function to confirm.                                                          |
-|      **message**      |                            `string`                            | `Do you want to continue?` |          | Sets the toast question message.                                                                        |
-|     **position**      | `'bottom-left' \| 'bottom-right' \| 'top-left' \| 'top-right'` |       `bottom-right`       |          | Sets the toast position. It will be ignored if `asModal` is `true`.                                     |
-|   **showCloseIcon**   |                           `boolean`                            |           `true`           |          | Sets if the close icon is displayed.                                                                    |
-|       **theme**       |            `'light' \| 'dark' \| 'snow' \| 'lilac'`            |          `light`           |          | Sets the toast style theme.                                                                             |
+|          Name           |                             Value                              |          Default           | Required | Description                                                                                             |
+| :---------------------: | :------------------------------------------------------------: | :------------------------: | :------: | ------------------------------------------------------------------------------------------------------- |
+|        **theme**        |            `'light' \| 'dark' \| 'snow' \| 'lilac'`            |          `light`           |          | Sets the toast style theme.                                                                             |
+|       **asModal**       |                           `boolean`                            |          `false`           |          | Toast will be displayed as a modal element, in the center of the viewport and darkening the background. |
+|      **className**      |                            `string`                            |           `none`           |          | Adds a class to the element.                                                                            |
+|      **position**       | `'bottom-left' \| 'bottom-right' \| 'top-left' \| 'top-right'` |       `bottom-right`       |          | Sets the toast position. It will be ignored if `asModal` is `true`.                                     |
+|      **toastText**      |                            `string`                            | `Do you want to continue?` |          | Sets the toast question text.                                                                           |
+|    **showCloseIcon**    |                           `boolean`                            |           `true`           |          | Sets if the close icon is displayed.                                                                    |
+|   **customFunction**    |                           `Function`                           |           `none`           |    ✅    | Defines the function to confirm.                                                                        |
+|  **cancelButtonText**   |                            `string`                            |          `Cancel`          |          | Sets the cancel button message.                                                                         |
+|  **confirmButtonText**  |                            `string`                            |            `Ok`            |          | Sets the confirm button message.                                                                        |
+|  **showConfirmToast**   |                           `boolean`                            |                            |    ✅    | A boolean React state that controls the toast.                                                          |
+| **setShowConfirmToast** |        `React.Dispatch<React.SetStateAction<boolean>>`         |                            |    ✅    | The `setState` of the `showConfirmToast` state.                                                         |
 
 ### Usage with React
 
@@ -57,7 +59,7 @@ const myFunction = () => {
 
 // [...]
 
-<ConfirmToast customFunction={myFunction}>
+;<ConfirmToast customFunction={myFunction}>
   <button>Click to run the default component</button>
 </ConfirmToast>
 ```
@@ -75,7 +77,7 @@ const myFunction = () => {
 
 // [...]
 
-<ConfirmToast
+;<ConfirmToast
   asModal={true}
   childrenClassName='margin-top-10'
   customCancel='Reject'
