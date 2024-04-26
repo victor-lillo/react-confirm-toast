@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { fn } from '@storybook/test'
 
-import { ConfirmToast } from '.'
+import { ConfirmToast } from '..'
 import { useState } from 'react'
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
@@ -61,4 +61,10 @@ export const Lilac: Story = {
 export const Snow: Story = {
   ...Template,
   args: { theme: 'snow' },
+}
+
+import './custom-class.css'
+export const CustomClass: Story = {
+  ...Template,
+  args: { className: 'custom-confirm-toast-theme' },
 }
