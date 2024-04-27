@@ -54,6 +54,21 @@ import { ConfirmToast } from 'react-confirm-toast'
 |  **cancelButtonText**   |                            `string`                            |          `Cancel`          |          | Sets the cancel button message.                                                                         |
 |  **confirmButtonText**  |                            `string`                            |            `Ok`            |          | Sets the confirm button message.                                                                        |
 
+## Creating or updating a theme 🦾
+
+For this purpose, there are some **custom properties** that you can override, passing a class to the `className` prop:
+
+|               Name                | Description                                                 |
+| :-------------------------------: | ----------------------------------------------------------- |
+|      **--confirm-toast-bg**       | Background color of the confirm toast.                      |
+|   **--confirm-toast-msg-color**   | Color of the message text in the confirm toast.             |
+|  **--confirm-toast-icon-color**   | Color of the icon in the confirm toast.                     |
+| **--confirm-toast-btn-yes-color** | Color of the "Yes" button text in the confirm toast.        |
+| **--confirm-toast-btn-no-color**  | Color of the "No" button text in the confirm toast.         |
+|  **--confirm-toast-btn-yes-bg**   | Background color of the "Yes" button in the confirm toast.  |
+|   **--confirm-toast-btn-no-bg**   | Background color of the "No" button in the confirm toast.   |
+|   **--confirm-toast-btn-hover**   | Opacity value for button hover effect in the confirm toast. |
+
 ## Examples 📝
 
 ### Minimum working example
