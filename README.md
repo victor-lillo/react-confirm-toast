@@ -116,9 +116,9 @@ export function Page() {
       </button>
       <ConfirmToast
         asModal={true}
+        customFunction={myFunction}
         setShowConfirmToast={setShow}
         showConfirmToast={show}
-        customFunction={myFunction}
       />
     </section>
   )
@@ -151,11 +151,11 @@ export function Page() {
       <ConfirmToast
         cancelButtonText='Yes'
         confirmButtonText='No'
-        toastText=''
-        theme='dark'
+        customFunction={myFunction}
         setShowConfirmToast={setShow}
         showConfirmToast={show}
-        customFunction={myFunction}
+        theme='dark'
+        toastText=''
       />
     </section>
   )
@@ -205,9 +205,9 @@ export function Page() {
       </button>
       <ConfirmToast
         className='custom-confirm-toast-theme'
+        customFunction={myFunction}
         setShowConfirmToast={setShow}
         showConfirmToast={show}
-        customFunction={myFunction}
       />
     </section>
   )
