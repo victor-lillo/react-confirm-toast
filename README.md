@@ -32,11 +32,11 @@ import { ConfirmToast } from 'react-confirm-toast'
 
 `ConfirmToast` is highly customizable, you can:
 
-- Change theme among the 4 available, or creating a custom one.
-- Use the toast as a modal (in the center of the viewport) or not.
-- Change the position of the toast.
-- Change toast and button texts.
-- Hide or show the close icon.
+- Change **theme** among the 4 available, or creating a custom one.
+- Use the toast **as a modal** (in the center of the viewport) or not.
+- Change the **position** of the toast.
+- Change toast and button **texts**.
+- Hide or show the **close icon**.
 
 ## Properties ⚙️
 
