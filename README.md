@@ -231,7 +231,11 @@ export function Page() {
 
 ## Migration from v1 to v2
 
-Some attributes have been renamed:
+In this version there are several breaking changes:
+
+### Properties naming
+
+Although the behavior remains unchanged, some properties have been renamed due to syntax reasons:
 
 |     Previous name     |   Current name    |
 | :-------------------: | :---------------: |
