@@ -229,7 +229,7 @@ export function Page() {
 }
 ```
 
-## Migration from v1 to v2
+## Migration from `v1` to `v2`
 
 In this version there are several breaking changes:
 
@@ -237,18 +237,18 @@ In this version there are several breaking changes:
 
 Although the behavior remains unchanged, some properties have been renamed due to syntax reasons:
 
-|     Previous name     |   Current name    |
-| :-------------------: | :---------------: |
-|      **asModal**      |         -         |
-| **childrenClassName** |     className     |
-|   **customCancel**    | cancelButtonText  |
-|   **customConfirm**   | confirmButtonText |
-|  **customFunction**   |         -         |
-|      **message**      |     toastText     |
-|     **position**      |         -         |
-|   **showCloseIcon**   |         -         |
-|       **theme**       |         -         |
+|    Previous name    |    Current name     |
+| :-----------------: | :-----------------: |
+| `childrenClassName` |     `className`     |
+|   `customCancel`    | `cancelButtonText`  |
+|   `customConfirm`   | `confirmButtonText` |
+|      `message`      |     `toastText`     |
 
-New attributes:
+### New attributes
 
-state and setState
+In this version, the component doesn't control its own state. This decision has been made to increase the flexibility of the component and to enable its programmatic use.
+
+For this, now there are two new props:
+
+- `showConfirmToast` (`boolean`): the boolean state.
+- `setShowConfirmToast` (`React.Dispatch<React.SetStateAction<boolean>>`): the state setter.
