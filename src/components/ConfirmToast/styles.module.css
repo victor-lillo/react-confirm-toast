@@ -1,3 +1,14 @@
+.dialog {
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  contain: paint;
+}
+
+.dialog::backdrop {
+  background: #0000005b;
+}
+
 .container,
 .title-container,
 .buttons-container {
