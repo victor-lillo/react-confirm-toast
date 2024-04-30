@@ -51,17 +51,19 @@ export function ConfirmToast({
     return <>{children}</>
   }
 
-  const closeModal = (e: React.MouseEvent): void => {
-    e.stopPropagation()
-    setShowConfirmToast(false)
-  }
-
-  const clickOutOfModal = (e: React.MouseEvent): void => {
-    const target = e.target as HTMLElement
-    if (target.getAttribute('data-out')) {
-      closeModal(e)
+  useEffect(() => {
+    if (showConfirmToast) {
+      asModal ? dialogRef.current?.showModal() : dialogRef.current?.show()
+      document.addEventListener('click', handleClick, true)
+    } else {
+      dialogRef.current?.close()
+      document.removeEventListener('click', handleClick, true)
     }
-  }
+
+    return () => {
+      document.removeEventListener('click', handleClick, true)
+    }
+  }, [showConfirmToast])
 
   const classes = clsx(
     styles.dialog,
