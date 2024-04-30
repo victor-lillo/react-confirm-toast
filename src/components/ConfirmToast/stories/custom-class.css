@@ -1,4 +1,5 @@
 .custom-confirm-toast-theme {
+  --confirm-toast-box-shadow: 0 0 1px 4px purple;
   --confirm-toast-bg: aquamarine;
   --confirm-toast-msg-color: purple;
   --confirm-toast-icon-color: black;
