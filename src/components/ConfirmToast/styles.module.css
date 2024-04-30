@@ -147,19 +147,19 @@
   }
 }
 
-@keyframes toast-in-modal {
+@keyframes slide-in-up {
+  0% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes scale-up {
   from {
     transform: scale(0);
   }
 
   to {
-    transform: scale(100%);
-  }
-}
-
-@keyframes slide-in-up {
-  0% {
-    transform: translateY(100%);
+    transform: scale(1);
   }
 }
 
