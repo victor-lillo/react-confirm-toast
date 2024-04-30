@@ -38,7 +38,7 @@ export function ConfirmToast({
     // todo
     // Version asModal
     if (asModal && dialogRef.current && $clickedElement.matches('dialog')) {
-      console.log('click out modal')
+      console.log({ asModal }, 'click out')
       setShowConfirmToast(false)
     } else {
       console.log('else')
