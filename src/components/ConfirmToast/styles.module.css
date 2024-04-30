@@ -23,8 +23,6 @@
   background: #0000005b;
 }
 
-/* TODO fix animations code */
-
 @media (prefers-reduced-motion: no-preference) {
   .dialog--modal {
     animation: scale-down 0.5s var(--ease);
