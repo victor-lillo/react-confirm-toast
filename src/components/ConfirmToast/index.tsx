@@ -74,47 +74,44 @@ export function ConfirmToast({
   )
 
   return (
-    showConfirmToast && (
-      <Wrapper asModal={asModal}>
-        <output className={classes}>
-          <div className={styles['title-container']}>
-            <p className={styles.title}>{toastText}</p>
-            {showCloseIcon && (
-              <button
-                className={styles['close-button']}
-                onClick={(e) => {
-                  closeModal(e)
-                }}
-              >
-                <CloseIcon
-                  aria-label='close modal'
-                  className={styles['close-svg']}
-                />
-              </button>
-            )}
-          </div>
+    <dialog
+      className={classes}
+      ref={dialogRef}
+    >
+      <div className={styles.container}>
+        <div className={styles['title-container']}>
+          <p className={styles.title}>{toastText}</p>
+          {showCloseIcon && (
+            <button
+              className={styles['close-button']}
+              onClick={() => setShowConfirmToast(false)}
+            >
+              <CloseIcon
+                aria-label='close modal'
+                className={styles['close-svg']}
+              />
+            </button>
+          )}
+        </div>
 
-          <div className={styles['buttons-container']}>
-            <button
-              className={`${styles.button} ${styles['button--yes']}`}
-              onClick={(e) => {
-                customFunction()
-                closeModal(e)
-              }}
-            >
-              {confirmButtonText}
-            </button>
-            <button
-              className={`${styles.button} ${styles['button--no']}`}
-              onClick={(e) => {
-                closeModal(e)
-              }}
-            >
-              {cancelButtonText}
-            </button>
-          </div>
-        </output>
-      </Wrapper>
-    )
+        <div className={styles['buttons-container']}>
+          <button
+            className={`${styles.button} ${styles['button--yes']}`}
+            onClick={() => {
+              customFunction()
+              setShowConfirmToast(false)
+            }}
+          >
+            {confirmButtonText}
+          </button>
+          <button
+            className={`${styles.button} ${styles['button--no']}`}
+            onClick={() => setShowConfirmToast(false)}
+          >
+            {cancelButtonText}
+          </button>
+        </div>
+      </div>
+    </dialog>
   )
 }
