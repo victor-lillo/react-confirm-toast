@@ -35,13 +35,12 @@ export function ConfirmToast({
   function handleClickOut(event: MouseEvent) {
     const $clickedElement = event.target as HTMLElement
 
-    // todo
-    // Version asModal
     if (asModal && dialogRef.current && $clickedElement.matches('dialog')) {
       console.log({ asModal }, 'click out')
       setShowConfirmToast(false)
-    } else {
-      console.log('else')
+    } else if (!asModal && dialogRef.current && !dialogRef.current.contains($clickedElement)) {
+      console.log({ asModal }, 'click out')
+      setShowConfirmToast(false)
     }
   }
 
