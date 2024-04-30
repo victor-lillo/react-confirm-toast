@@ -44,7 +44,14 @@ export function ConfirmToast({
     }
   }
 
+  function handleEsc(event: KeyboardEvent) {
+    const { key: pressedKey } = event
+    if (pressedKey === 'Escape') setShowConfirmToast(false)
+  }
+
   useEffect(() => {
+    document.addEventListener('keydown', handleEsc)
+
     if (showConfirmToast) {
       asModal ? dialogRef.current?.showModal() : dialogRef.current?.show()
       document.addEventListener('click', handleClickOut, true)
@@ -55,6 +62,7 @@ export function ConfirmToast({
 
     return () => {
       document.removeEventListener('click', handleClickOut, true)
+      document.removeEventListener('keydown', handleEsc)
     }
   }, [showConfirmToast])
 
