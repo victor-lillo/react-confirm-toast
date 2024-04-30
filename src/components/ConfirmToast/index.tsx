@@ -1,4 +1,4 @@
-import React from 'react'
+import { useEffect, useRef } from 'react'
 import clsx from 'clsx'
 import { CloseIcon } from '../CloseIcon'
 import styles from './styles.module.css'
@@ -30,38 +30,32 @@ export function ConfirmToast({
   showConfirmToast,
   theme = 'light',
 }: ConfirmToastProps) {
-  function Wrapper({
-    asModal,
-    children,
-  }: {
-    asModal: boolean
-    children: React.ReactNode
-  }): JSX.Element {
-    if (asModal) {
-      return (
-        <div
-          data-out={true}
-          onClick={clickOutOfModal}
-          className={styles.modal}
-        >
-          {children}
-        </div>
-      )
+  const dialogRef = useRef<HTMLDialogElement>(null)
+
+  function handleClickOut(event: MouseEvent) {
+    const $clickedElement = event.target as HTMLElement
+
+    // todo
+    // Version asModal
+    if (asModal && dialogRef.current && $clickedElement.matches('dialog')) {
+      console.log('click out modal')
+      setShowConfirmToast(false)
+    } else {
+      console.log('else')
     }
-    return <>{children}</>
   }
 
   useEffect(() => {
     if (showConfirmToast) {
       asModal ? dialogRef.current?.showModal() : dialogRef.current?.show()
-      document.addEventListener('click', handleClick, true)
+      document.addEventListener('click', handleClickOut, true)
     } else {
       dialogRef.current?.close()
-      document.removeEventListener('click', handleClick, true)
+      document.removeEventListener('click', handleClickOut, true)
     }
 
     return () => {
-      document.removeEventListener('click', handleClick, true)
+      document.removeEventListener('click', handleClickOut, true)
     }
   }, [showConfirmToast])
 
