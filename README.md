@@ -22,7 +22,7 @@ yarn add react-confirm-toast
 
 ## Usage 🎮
 
-[React](https://sass-lang.com/) and [React-dom](https://sass-lang.com/) are peer dependencies. Your project needs to have them installed in order to use this confirm toast.
+[React](https://www.npmjs.com/package/react) and [React-dom](https://www.npmjs.com/package/react-dom) are peer dependencies. Your project needs to have them installed in order to use this confirm toast.
 
 ```jsx
 import { ConfirmToast } from 'react-confirm-toast'
