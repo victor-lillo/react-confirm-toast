@@ -115,7 +115,7 @@
 .bottom-right {
   position: fixed;
   margin: unset;
-  inset-inline-start: unset;
+  inset: auto;
 }
 
 .bottom-left {
