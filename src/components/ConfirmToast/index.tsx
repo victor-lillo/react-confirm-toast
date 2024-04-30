@@ -64,10 +64,9 @@ export function ConfirmToast({
   }
 
   const classes = clsx(
-    styles.container,
+    styles.dialog,
     {
       [styles[position]]: asModal ? false : position, //if asModal, don't return 'position' class
-      [styles['modal-content']]: asModal,
     },
     styles[theme],
     className
