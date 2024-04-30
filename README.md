@@ -50,9 +50,9 @@ import { ConfirmToast } from 'react-confirm-toast'
 |    **buttonYesText**    |                               `string`                               |            `'Ok'`            |          | Sets the confirm button message.                                                                        |
 |      **className**      |                               `string`                               |                              |          | Adds a class to the element.                                                                            |
 |      **position**       | `'bottom-left'` \| `'bottom-right'` \| `'top-left'` \| `'top-right'` |       `'bottom-right'`       |          | Sets the toast position. It will be ignored if `asModal` is `true`.                                     |
+|    **showCloseIcon**    |                              `boolean`                               |            `true`            |          | Sets if the close icon is displayed.                                                                    |
 |        **theme**        |            `'light'` \| `'dark'` \| `'snow'` \| `'lilac'`            |          `'light'`           |          | Sets the toast style theme.                                                                             |
 |      **toastText**      |                               `string`                               | `'Do you want to continue?'` |          | Sets the toast question text.                                                                           |
-|    **showCloseIcon**    |                              `boolean`                               |            `true`            |          | Sets if the close icon is displayed.                                                                    |
 
 ## Creating or updating a theme 🦾
 
