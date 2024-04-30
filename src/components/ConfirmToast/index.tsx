@@ -9,6 +9,7 @@ export interface ConfirmToastProps {
   cancelButtonText?: string
   confirmButtonText?: string
   customFunction: () => void
+  elementAutofocus?: 'button-yes' | 'button-no' | 'close-icon'
   toastText?: string
   position?: 'bottom-left' | 'bottom-right' | 'top-left' | 'top-right'
   setShowConfirmToast: React.Dispatch<React.SetStateAction<boolean>>
@@ -23,6 +24,7 @@ export function ConfirmToast({
   cancelButtonText = 'Cancel',
   confirmButtonText = 'Ok',
   customFunction,
+  elementAutofocus = 'button-yes',
   toastText = 'Do you want to continue?',
   position = 'bottom-right',
   setShowConfirmToast,
@@ -84,6 +86,7 @@ export function ConfirmToast({
           <p className={styles.title}>{toastText}</p>
           {showCloseIcon && (
             <button
+              autoFocus={elementAutofocus === 'close-icon'}
               className={styles['close-button']}
               onClick={() => setShowConfirmToast(false)}
             >
@@ -97,6 +100,7 @@ export function ConfirmToast({
 
         <div className={styles['buttons-container']}>
           <button
+            autoFocus={elementAutofocus === 'button-yes'}
             className={`${styles.button} ${styles['button--yes']}`}
             onClick={() => {
               customFunction()
@@ -106,6 +110,7 @@ export function ConfirmToast({
             {confirmButtonText}
           </button>
           <button
+            autoFocus={elementAutofocus === 'button-no'}
             className={`${styles.button} ${styles['button--no']}`}
             onClick={() => setShowConfirmToast(false)}
           >
