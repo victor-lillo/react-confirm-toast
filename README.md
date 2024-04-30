@@ -60,6 +60,7 @@ For this purpose, there are some **custom properties** that you can override, pa
 
 |               Name                | Description                                                 |
 | :-------------------------------: | ----------------------------------------------------------- |
+|  **--confirm-toast-box-shadow**   | Box shadow of the confirm toast.                            |
 |      **--confirm-toast-bg**       | Background color of the confirm toast.                      |
 |   **--confirm-toast-msg-color**   | Color of the message text in the confirm toast.             |
 |  **--confirm-toast-icon-color**   | Color of the icon in the confirm toast.                     |
@@ -183,6 +184,7 @@ Create a CSS class with the desired custom properties.
 
 ```css
 .custom-confirm-toast-theme {
+  --confirm-toast-box-shadow: 0 0 1px 4px purple;
   --confirm-toast-bg: aquamarine;
   --confirm-toast-msg-color: purple;
   --confirm-toast-icon-color: black;
