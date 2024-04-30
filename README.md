@@ -37,6 +37,7 @@ import { ConfirmToast } from 'react-confirm-toast'
 - Change the **position** of the toast.
 - Change toast and button **texts**.
 - Hide or show the **close icon**.
+- Select which button will be autofocused when the dialog opens.
 
 ## Properties ⚙️
 
@@ -49,7 +50,7 @@ import { ConfirmToast } from 'react-confirm-toast'
 |    **buttonNoText**     |                               `string`                               |          `'Cancel'`          |          | Sets the cancel button message.                                                                         |
 |    **buttonYesText**    |                               `string`                               |            `'Ok'`            |          | Sets the confirm button message.                                                                        |
 |      **className**      |                               `string`                               |                              |          | Adds a class to the element.                                                                            |
-|  **elementAutofocus**   |          `'button-yes'` \| `'button-no'` \| `'close-icon'`           |        `'button-yes'`        |          | Sets which element will be autofocused when the modal opens.                                            |
+|  **elementAutofocus**   |          `'button-yes'` \| `'button-no'` \| `'close-icon'`           |        `'button-yes'`        |          | Sets which element will be autofocused when the toast opens.                                            |
 |      **position**       | `'bottom-left'` \| `'bottom-right'` \| `'top-left'` \| `'top-right'` |       `'bottom-right'`       |          | Sets the toast position. It will be ignored if `asModal` is `true`.                                     |
 |    **showCloseIcon**    |                              `boolean`                               |            `true`            |          | Sets if the close icon is displayed.                                                                    |
 |        **theme**        |            `'light'` \| `'dark'` \| `'snow'` \| `'lilac'`            |          `'light'`           |          | Sets the toast style theme.                                                                             |
