@@ -189,8 +189,8 @@
 }
 
 .light {
-  --confirm-toast-bg: white;
   --confirm-toast-box-shadow: 0 0 10px 2px #4343434c;
+  --confirm-toast-bg: white;
   --confirm-toast-msg-color: black;
   --confirm-toast-icon-color: crimson;
   --confirm-toast-btn-yes-color: seagreen;
@@ -201,8 +201,8 @@
 }
 
 .dark {
-  --confirm-toast-bg: #232323;
   --confirm-toast-box-shadow: 0 0 10px 2px #4343434c;
+  --confirm-toast-bg: #232323;
   --confirm-toast-msg-color: white;
   --confirm-toast-icon-color: crimson;
   --confirm-toast-btn-yes-color: seagreen;
@@ -213,8 +213,8 @@
 }
 
 .snow {
-  --confirm-toast-bg: #eaf1fd;
   --confirm-toast-box-shadow: 0 0 10px 2px #4343434c;
+  --confirm-toast-bg: #eaf1fd;
   --confirm-toast-msg-color: #5077be;
   --confirm-toast-icon-color: #3c598e;
   --confirm-toast-btn-yes-color: #233453;
@@ -225,8 +225,8 @@
 }
 
 .lilac {
-  --confirm-toast-bg: #f5ebfa;
   --confirm-toast-box-shadow: 0 0 10px 2px #4343434c;
+  --confirm-toast-bg: #f5ebfa;
   --confirm-toast-msg-color: black;
   --confirm-toast-icon-color: #ad5bd6;
   --confirm-toast-btn-yes-color: #9e3ccf;
