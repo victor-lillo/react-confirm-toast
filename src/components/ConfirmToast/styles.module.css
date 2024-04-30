@@ -3,6 +3,7 @@
   border: none;
   border-radius: 8px;
   contain: paint;
+  box-shadow: 0 0 10px 2px #4343434c;
 }
 
 .dialog::backdrop {
@@ -36,7 +37,6 @@
   background-color: var(--confirm-toast-bg);
   padding: 1rem;
   gap: 1rem;
-  box-shadow: 0 0 10px 2px #4343434c;
 }
 
 .title-container {
