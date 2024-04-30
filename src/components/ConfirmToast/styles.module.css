@@ -1,7 +1,5 @@
 .dialog {
-  display: block;
   padding: 0;
-  inset: 0;
   border: none;
   transition: opacity 0.5s;
   border-radius: 8px;
@@ -9,24 +7,30 @@
   box-shadow: 0 0 10px 2px #4343434c;
 }
 
-.dialog:not([open]) {
+.dialog--modal {
+  display: block;
+  inset: 0;
+}
+
+.dialog--modal:not([open]) {
   opacity: 0;
   pointer-events: none;
 }
 
-.dialog::backdrop {
+.dialog--modal::backdrop {
   background: #0000005b;
 }
 
+/* TODO fix animations code */
+
 @media (prefers-reduced-motion: no-preference) {
-  .dialog {
+  .dialog--modal {
     --ease-3: cubic-bezier(0.25, 0, 0.3, 1);
 
     animation: scale-down 0.5s var(--ease-3) forwards;
-    animation-timing-function: cubic-bezier(0.5, -0.5, 0.1, 1.5);
   }
 
-  .dialog[open] {
+  .dialog--modal[open] {
     animation: slide-in-up 0.5s var(--ease-3) forwards;
   }
 }
