@@ -5,32 +5,32 @@ import styles from './styles.module.css'
 
 export interface ConfirmToastProps {
   asModal?: boolean
+  buttonNoText?: string
+  buttonYesText?: string
   className?: string
-  cancelButtonText?: string
-  confirmButtonText?: string
   customFunction: () => void
   elementAutofocus?: 'button-yes' | 'button-no' | 'close-icon'
-  toastText?: string
   position?: 'bottom-left' | 'bottom-right' | 'top-left' | 'top-right'
   setShowConfirmToast: React.Dispatch<React.SetStateAction<boolean>>
   showCloseIcon?: boolean
   showConfirmToast: boolean
   theme?: 'light' | 'dark' | 'snow' | 'lilac'
+  toastText?: string
 }
 
 export function ConfirmToast({
   asModal = false,
+  buttonNoText = 'Cancel',
+  buttonYesText = 'Ok',
   className,
-  cancelButtonText = 'Cancel',
-  confirmButtonText = 'Ok',
   customFunction,
   elementAutofocus = 'button-yes',
-  toastText = 'Do you want to continue?',
   position = 'bottom-right',
   setShowConfirmToast,
   showCloseIcon = true,
   showConfirmToast,
   theme = 'light',
+  toastText = 'Do you want to continue?',
 }: ConfirmToastProps) {
   const dialogRef = useRef<HTMLDialogElement>(null)
 
@@ -107,14 +107,14 @@ export function ConfirmToast({
               setShowConfirmToast(false)
             }}
           >
-            {confirmButtonText}
+            {buttonYesText}
           </button>
           <button
             autoFocus={elementAutofocus === 'button-no'}
             className={`${styles.button} ${styles['button--no']}`}
             onClick={() => setShowConfirmToast(false)}
           >
-            {cancelButtonText}
+            {buttonNoText}
           </button>
         </div>
       </div>
