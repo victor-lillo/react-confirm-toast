@@ -55,6 +55,13 @@
   padding: 0;
 }
 
+@media (hover: hover) {
+  .close-button:focus {
+    border-radius: 4px;
+    outline: 2px solid black;
+  }
+}
+
 .close-svg {
   color: var(--confirm-toast-icon-color);
   vertical-align: middle;
