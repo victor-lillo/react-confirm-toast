@@ -25,21 +25,18 @@
 .container,
 .title-container,
 .buttons-container {
+  display: flex;
   align-items: center;
   justify-content: center;
-  display: flex;
 }
 
 .container {
   font-family: system-ui;
-  position: fixed;
-  background-color: var(--confirm-toast-bg);
-  padding: 1.2rem;
   flex-direction: column;
+  background-color: var(--confirm-toast-bg);
+  padding: 1rem;
   gap: 1rem;
-  border-radius: 8px;
   box-shadow: 0 0 10px 2px #4343434c;
-  z-index: 9999999;
 }
 
 .title-container {
