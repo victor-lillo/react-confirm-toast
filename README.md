@@ -45,14 +45,15 @@ import { ConfirmToast } from 'react-confirm-toast'
 |   **customFunction**    |                           `Function`                           |                            |    ✅    | Defines the function to confirm.                                                                        |
 |  **showConfirmToast**   |                           `boolean`                            |                            |    ✅    | A boolean React state that controls the toast.                                                          |
 | **setShowConfirmToast** |        `React.Dispatch<React.SetStateAction<boolean>>`         |                            |    ✅    | The `setState` of the `showConfirmToast` state.                                                         |
-|        **theme**        |            `'light' \| 'dark' \| 'snow' \| 'lilac'`            |          `light`           |          | Sets the toast style theme.                                                                             |
 |       **asModal**       |                           `boolean`                            |          `false`           |          | Toast will be displayed as a modal element, in the center of the viewport and darkening the background. |
+|    **buttonNoText**     |                            `string`                            |          `Cancel`          |          | Sets the cancel button message.                                                                         |
+|    **buttonYesText**    |                            `string`                            |            `Ok`            |          | Sets the confirm button message.                                                                        |
 |      **className**      |                            `string`                            |           `none`           |          | Adds a class to the element.                                                                            |
+|      **position**       |                 `'button-yes' \| 'button-no'`                  |       `bottom-right`       |          | Sets the toast position. It will be ignored if `asModal` is `true`.                                     |
 |      **position**       | `'bottom-left' \| 'bottom-right' \| 'top-left' \| 'top-right'` |       `bottom-right`       |          | Sets the toast position. It will be ignored if `asModal` is `true`.                                     |
+|        **theme**        |            `'light' \| 'dark' \| 'snow' \| 'lilac'`            |          `light`           |          | Sets the toast style theme.                                                                             |
 |      **toastText**      |                            `string`                            | `Do you want to continue?` |          | Sets the toast question text.                                                                           |
 |    **showCloseIcon**    |                           `boolean`                            |           `true`           |          | Sets if the close icon is displayed.                                                                    |
-|  **cancelButtonText**   |                            `string`                            |          `Cancel`          |          | Sets the cancel button message.                                                                         |
-|  **confirmButtonText**  |                            `string`                            |            `Ok`            |          | Sets the confirm button message.                                                                        |
 
 ## Creating or updating a theme 🦾
 
@@ -165,8 +166,8 @@ export function Page() {
         Click to open ConfirmToast
       </button>
       <ConfirmToast
-        cancelButtonText='Yes'
-        confirmButtonText='No'
+        buttonNoText='No'
+        buttonYesText='Yes'
         customFunction={myFunction}
         setShowConfirmToast={setShow}
         showConfirmToast={show}
@@ -239,12 +240,12 @@ In this version there are several breaking changes:
 
 Although the behavior remains unchanged, some properties have been renamed due to syntax reasons:
 
-|    Previous name    |    Current name     |
-| :-----------------: | :-----------------: |
-| `childrenClassName` |     `className`     |
-|   `customCancel`    | `cancelButtonText`  |
-|   `customConfirm`   | `confirmButtonText` |
-|      `message`      |     `toastText`     |
+|    Previous name    |  Current name   |
+| :-----------------: | :-------------: |
+| `childrenClassName` |   `className`   |
+|   `customCancel`    | `buttonNoText`  |
+|   `customConfirm`   | `buttonYesText` |
+|      `message`      |   `toastText`   |
 
 ### New attributes
 
