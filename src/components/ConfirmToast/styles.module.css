@@ -67,7 +67,7 @@
 
   @media (hover: hover) {
     &:focus {
-      outline: 2px solid black;
+      outline: var(--confirm-toast-btn-close-focus);
     }
   }
 }
@@ -106,7 +106,7 @@
 
   @media (hover: hover) {
     &:focus {
-      outline: 2px solid black;
+      outline: var(--confirm-toast-btn-yes-focus);
     }
   }
 }
@@ -117,7 +117,7 @@
 
   @media (hover: hover) {
     &:focus {
-      outline: 2px solid black;
+      outline: var(--confirm-toast-btn-no-focus);
     }
   }
 }
@@ -198,6 +198,9 @@
 }
 
 .light {
+  --confirm-toast-btn-yes-focus: 2px solid black;
+  --confirm-toast-btn-no-focus: 2px solid black;
+  --confirm-toast-btn-close-focus: 2px solid black;
   --confirm-toast-box-shadow: 0 0 10px 2px #4343434c;
   --confirm-toast-bg: white;
   --confirm-toast-msg-color: black;
@@ -210,6 +213,9 @@
 }
 
 .dark {
+  --confirm-toast-btn-yes-focus: 2px solid #bbb;
+  --confirm-toast-btn-no-focus: 2px solid #bbb;
+  --confirm-toast-btn-close-focus: 2px solid #bbb;
   --confirm-toast-box-shadow: 0 0 10px 2px #4343434c;
   --confirm-toast-bg: #232323;
   --confirm-toast-msg-color: white;
@@ -222,6 +228,9 @@
 }
 
 .snow {
+  --confirm-toast-btn-yes-focus: 2px solid black;
+  --confirm-toast-btn-no-focus: 2px solid black;
+  --confirm-toast-btn-close-focus: 2px solid black;
   --confirm-toast-box-shadow: 0 0 10px 2px #4343434c;
   --confirm-toast-bg: #eaf1fd;
   --confirm-toast-msg-color: #5077be;
@@ -234,6 +243,9 @@
 }
 
 .lilac {
+  --confirm-toast-btn-yes-focus: 2px solid black;
+  --confirm-toast-btn-no-focus: 2px solid black;
+  --confirm-toast-btn-close-focus: 2px solid black;
   --confirm-toast-box-shadow: 0 0 10px 2px #4343434c;
   --confirm-toast-bg: #f5ebfa;
   --confirm-toast-msg-color: black;
