@@ -60,14 +60,14 @@ For this purpose, there are some **custom properties** that you can override, pa
 
 |                Name                 | CSS rule           | Description                                                 |
 | :---------------------------------: | ------------------ | ----------------------------------------------------------- |
-|   **--confirm-toast-box-shadow**    | `box-shadow`       | Box shadow of the confirm toast.                            |
 |       **--confirm-toast-bg**        | `background-color` | Background color of the confirm toast.                      |
+|   **--confirm-toast-box-shadow**    | `box-shadow`       | Box shadow of the confirm toast.                            |
 |   **--confirm-toast-text-color**    | `color`            | Color of the message text in the confirm toast.             |
 |   **--confirm-toast-icon-color**    | `color`            | Color of the icon in the confirm toast.                     |
-|  **--confirm-toast-btn-yes-color**  | `color`            | Color of the "Yes" button text in the confirm toast.        |
-|  **--confirm-toast-btn-no-color**   | `color`            | Color of the "No" button text in the confirm toast.         |
 |   **--confirm-toast-btn-yes-bg**    | `background-color` | Background color of the "Yes" button in the confirm toast.  |
+|  **--confirm-toast-btn-yes-color**  | `color`            | Color of the "Yes" button text in the confirm toast.        |
 |    **--confirm-toast-btn-no-bg**    | `background-color` | Background color of the "No" button in the confirm toast.   |
+|  **--confirm-toast-btn-no-color**   | `color`            | Color of the "No" button text in the confirm toast.         |
 |    **--confirm-toast-btn-hover**    | `filter`           | Opacity value for button hover effect in the confirm toast. |
 |  **--confirm-toast-btn-yes-focus**  | `outline`          | Opacity value for button hover effect in the confirm toast. |
 |  **--confirm-toast-btn-no-focus**   | `outline`          | Opacity value for button hover effect in the confirm toast. |
@@ -187,14 +187,14 @@ Create a CSS class with the desired custom properties.
 
 ```css
 .custom-confirm-toast-theme {
-  --confirm-toast-box-shadow: 0 0 1px 4px purple;
   --confirm-toast-bg: aquamarine;
+  --confirm-toast-box-shadow: 0 0 1px 4px purple;
   --confirm-toast-text-color: purple;
   --confirm-toast-icon-color: black;
-  --confirm-toast-btn-yes-color: lightgreen;
   --confirm-toast-btn-yes-bg: green;
-  --confirm-toast-btn-no-color: black;
+  --confirm-toast-btn-yes-color: lightgreen;
   --confirm-toast-btn-no-bg: yellow;
+  --confirm-toast-btn-no-color: black;
   --confirm-toast-btn-hover: brightness(0.9);
   --confirm-toast-btn-yes-focus: 2px solid orange;
   --confirm-toast-btn-no-focus: 2px solid orange;
