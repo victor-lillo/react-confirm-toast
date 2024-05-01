@@ -64,19 +64,17 @@
   border: none;
   padding: 0;
   border-radius: 4px;
+  color: var(--confirm-toast-icon-color);
+
+  & svg {
+    vertical-align: middle;
+  }
 
   @media (hover: hover) {
     &:focus {
       outline: var(--confirm-toast-btn-close-focus);
     }
-  }
-}
 
-.close-svg {
-  color: var(--confirm-toast-icon-color);
-  vertical-align: middle;
-
-  @media (hover: hover) {
     &:hover {
       filter: brightness(1.3);
     }
