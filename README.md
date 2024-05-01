@@ -58,17 +58,20 @@ import { ConfirmToast } from 'react-confirm-toast'
 
 For this purpose, there are some **custom properties** that you can override, passing a class to the `className` prop:
 
-|               Name                | Description                                                 |
-| :-------------------------------: | ----------------------------------------------------------- |
-|  **--confirm-toast-box-shadow**   | Box shadow of the confirm toast.                            |
-|      **--confirm-toast-bg**       | Background color of the confirm toast.                      |
-|  **--confirm-toast-text-color**   | Color of the message text in the confirm toast.             |
-|  **--confirm-toast-icon-color**   | Color of the icon in the confirm toast.                     |
-| **--confirm-toast-btn-yes-color** | Color of the "Yes" button text in the confirm toast.        |
-| **--confirm-toast-btn-no-color**  | Color of the "No" button text in the confirm toast.         |
-|  **--confirm-toast-btn-yes-bg**   | Background color of the "Yes" button in the confirm toast.  |
-|   **--confirm-toast-btn-no-bg**   | Background color of the "No" button in the confirm toast.   |
-|   **--confirm-toast-btn-hover**   | Opacity value for button hover effect in the confirm toast. |
+|                Name                 | CSS rule           | Description                                                 |
+| :---------------------------------: | ------------------ | ----------------------------------------------------------- |
+|   **--confirm-toast-box-shadow**    | `box-shadow`       | Box shadow of the confirm toast.                            |
+|       **--confirm-toast-bg**        | `background-color` | Background color of the confirm toast.                      |
+|   **--confirm-toast-text-color**    | `color`            | Color of the message text in the confirm toast.             |
+|   **--confirm-toast-icon-color**    | `color`            | Color of the icon in the confirm toast.                     |
+|  **--confirm-toast-btn-yes-color**  | `color`            | Color of the "Yes" button text in the confirm toast.        |
+|  **--confirm-toast-btn-no-color**   | `color`            | Color of the "No" button text in the confirm toast.         |
+|   **--confirm-toast-btn-yes-bg**    | `background-color` | Background color of the "Yes" button in the confirm toast.  |
+|    **--confirm-toast-btn-no-bg**    | `background-color` | Background color of the "No" button in the confirm toast.   |
+|    **--confirm-toast-btn-hover**    | `filter`           | Opacity value for button hover effect in the confirm toast. |
+|  **--confirm-toast-btn-yes-focus**  | `outline`          | Opacity value for button hover effect in the confirm toast. |
+|  **--confirm-toast-btn-no-focus**   | `outline`          | Opacity value for button hover effect in the confirm toast. |
+| **--confirm-toast-btn-close-focus** | `outline`          | Opacity value for button hover effect in the confirm toast. |
 
 ## Examples 📝
 
@@ -260,3 +263,23 @@ For this, now there are two new props:
 
 - `showConfirmToast` (`boolean`): the boolean state.
 - `setShowConfirmToast` (`React.Dispatch<React.SetStateAction<boolean>>`): the state setter.
+
+## Custom properties
+
+- `--confirm-toast-btn-hover` has been changed.
+
+Before, the custom property was engaged to the `brightness` filter function.
+
+```css
+.button:hover {
+  filter: brightness(var(--confirm-toast-btn-hover));
+}
+```
+
+Now, this custom property sets the `filter` CSS rule.
+
+```css
+.button:hover {
+  filter: var(--confirm-toast-btn-hover);
+}
+```
