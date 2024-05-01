@@ -27,7 +27,7 @@ const Template: Story = {
     const [open, setOpen] = useState(false)
     return (
       <>
-        <button onClick={() => setOpen(true)}>External Click me!</button>
+        <button onClick={() => setOpen(true)}>Click to open!</button>
         <ConfirmToast
           {...args}
           showConfirmToast={open}
