@@ -63,7 +63,7 @@ For this purpose, there are some **custom properties** that you can override, pa
 |       **--confirm-toast-bg**        | `background-color` | Background color of the confirm toast.                            |
 |   **--confirm-toast-box-shadow**    | `box-shadow`       | Box shadow of the confirm toast.                                  |
 |   **--confirm-toast-text-color**    | `color`            | Color of the message text in the confirm toast.                   |
-|   **--confirm-toast-icon-color**    | `color`            | Color of the `button-close` in the confirm toast.                 |
+| **--confirm-toast-btn-close-color** | `color`            | Color of the `button-close` in the confirm toast.                 |
 |   **--confirm-toast-btn-yes-bg**    | `background-color` | Background color of the `button-yes` in the confirm toast.        |
 |  **--confirm-toast-btn-yes-color**  | `color`            | Color of the `button-yes` text in the confirm toast.              |
 |    **--confirm-toast-btn-no-bg**    | `background-color` | Background color of the `button-no` in the confirm toast.         |
@@ -190,7 +190,7 @@ Create a CSS class with the desired custom properties.
   --confirm-toast-bg: aquamarine;
   --confirm-toast-box-shadow: 0 0 1px 4px purple;
   --confirm-toast-text-color: purple;
-  --confirm-toast-icon-color: black;
+  --confirm-toast-btn-close-color: black;
   --confirm-toast-btn-yes-bg: green;
   --confirm-toast-btn-yes-color: lightgreen;
   --confirm-toast-btn-no-bg: yellow;
@@ -241,7 +241,7 @@ export function Page() {
 
 In this version there are several breaking changes:
 
-### Properties naming
+### Component properties & custom properties naming
 
 Although the behavior remains unchanged, some **component properties** have been renamed due to syntax reasons:
 
@@ -254,9 +254,10 @@ Although the behavior remains unchanged, some **component properties** have been
 
 Also, there are some **custom properties** that have been renamed:
 
-|        Previous name        |         Current name         |
-| :-------------------------: | :--------------------------: |
-| `--confirm-toast-msg-color` | `--confirm-toast-text-color` |
+|        Previous name         |           Current name            |
+| :--------------------------: | :-------------------------------: |
+| `--confirm-toast-msg-color`  |   `--confirm-toast-text-color`    |
+| `--confirm-toast-icon-color` | `--confirm-toast-btn-close-color` |
 
 ### New attributes
 
@@ -271,18 +272,18 @@ For this, now there are two new props:
 
 - `--confirm-toast-btn-hover` has been changed.
 
-Before, the custom property was engaged to the `brightness` filter function.
+  Before, the custom property was engaged to the `brightness` filter function.
 
-```css
-.button:hover {
-  filter: brightness(var(--confirm-toast-btn-hover));
-}
-```
+  ```css
+  .button:hover {
+    filter: brightness(var(--confirm-toast-btn-hover));
+  }
+  ```
 
-Now, this custom property sets the `filter` CSS rule.
+  Now, this custom property sets the `filter` CSS rule.
 
-```css
-.button:hover {
-  filter: var(--confirm-toast-btn-hover);
-}
-```
+  ```css
+  .button:hover {
+    filter: var(--confirm-toast-btn-hover);
+  }
+  ```
