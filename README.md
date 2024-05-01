@@ -62,7 +62,7 @@ For this purpose, there are some **custom properties** that you can override, pa
 | :-------------------------------: | ----------------------------------------------------------- |
 |  **--confirm-toast-box-shadow**   | Box shadow of the confirm toast.                            |
 |      **--confirm-toast-bg**       | Background color of the confirm toast.                      |
-|   **--confirm-toast-msg-color**   | Color of the message text in the confirm toast.             |
+|  **--confirm-toast-text-color**   | Color of the message text in the confirm toast.             |
 |  **--confirm-toast-icon-color**   | Color of the icon in the confirm toast.                     |
 | **--confirm-toast-btn-yes-color** | Color of the "Yes" button text in the confirm toast.        |
 | **--confirm-toast-btn-no-color**  | Color of the "No" button text in the confirm toast.         |
@@ -237,7 +237,7 @@ In this version there are several breaking changes:
 
 ### Properties naming
 
-Although the behavior remains unchanged, some properties have been renamed due to syntax reasons:
+Although the behavior remains unchanged, some **component properties** have been renamed due to syntax reasons:
 
 |    Previous name    |  Current name   |
 | :-----------------: | :-------------: |
@@ -245,6 +245,12 @@ Although the behavior remains unchanged, some properties have been renamed due t
 |   `customCancel`    | `buttonNoText`  |
 |   `customConfirm`   | `buttonYesText` |
 |      `message`      |   `toastText`   |
+
+Also, there are some **custom properties** that have been renamed:
+
+|        Previous name        |         Current name         |
+| :-------------------------: | :--------------------------: |
+| `--confirm-toast-msg-color` | `--confirm-toast-text-color` |
 
 ### New attributes
 
