@@ -84,7 +84,7 @@ export function ConfirmToast({
           <p className={styles.title}>{toastText}</p>
           {showCloseIcon && (
             <button
-              className={styles['close-button']}
+              className={styles['button-close']}
               onClick={() => setShowConfirmToast(false)}
             >
               <CloseIcon
