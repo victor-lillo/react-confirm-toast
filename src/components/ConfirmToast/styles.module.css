@@ -63,12 +63,12 @@
   background: none;
   border: none;
   padding: 0;
-}
 
-@media (hover: hover) {
-  .close-button:focus {
-    border-radius: 4px;
-    outline: 2px solid black;
+  @media (hover: hover) {
+    &:focus {
+      border-radius: 4px;
+      outline: 2px solid black;
+    }
   }
 }
 
@@ -88,25 +88,36 @@
 }
 
 .button {
-  text-transform: uppercase;
   font-weight: bold;
-  padding: 0.6rem;
+  padding: 0.4rem 0.6rem;
   border: none;
-  border-radius: 0.4rem;
-
-  &.button--yes {
-    color: var(--confirm-toast-btn-yes-color);
-    background-color: var(--confirm-toast-btn-yes-bg);
-  }
-
-  &.button--no {
-    color: var(--confirm-toast-btn-no-color);
-    background-color: var(--confirm-toast-btn-no-bg);
-  }
+  border-radius: 6px;
 
   @media (hover: hover) {
     &:hover {
       filter: brightness(var(--confirm-toast-btn-hover));
+    }
+  }
+}
+
+.button--yes {
+  color: var(--confirm-toast-btn-yes-color);
+  background-color: var(--confirm-toast-btn-yes-bg);
+
+  @media (hover: hover) {
+    &:focus {
+      outline: 2px solid black;
+    }
+  }
+}
+
+.button--no {
+  color: var(--confirm-toast-btn-no-color);
+  background-color: var(--confirm-toast-btn-no-bg);
+
+  @media (hover: hover) {
+    &:focus {
+      outline: 2px solid black;
     }
   }
 }
