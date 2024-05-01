@@ -189,13 +189,16 @@ Create a CSS class with the desired custom properties.
 .custom-confirm-toast-theme {
   --confirm-toast-box-shadow: 0 0 1px 4px purple;
   --confirm-toast-bg: aquamarine;
-  --confirm-toast-msg-color: purple;
+  --confirm-toast-text-color: purple;
   --confirm-toast-icon-color: black;
   --confirm-toast-btn-yes-color: lightgreen;
-  --confirm-toast-btn-no-color: black;
   --confirm-toast-btn-yes-bg: green;
+  --confirm-toast-btn-no-color: black;
   --confirm-toast-btn-no-bg: yellow;
-  --confirm-toast-btn-hover: 0.9;
+  --confirm-toast-btn-hover: brightness(0.9);
+  --confirm-toast-btn-yes-focus: 2px solid orange;
+  --confirm-toast-btn-no-focus: 2px solid orange;
+  --confirm-toast-btn-close-focus: 2px solid red;
 }
 ```
 
