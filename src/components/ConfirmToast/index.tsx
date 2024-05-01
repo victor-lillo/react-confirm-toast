@@ -62,6 +62,7 @@ export function ConfirmToast({
       document.removeEventListener('click', handleClickOut, true)
       document.removeEventListener('keydown', handleEsc)
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [showConfirmToast])
 
   const classes = clsx(
