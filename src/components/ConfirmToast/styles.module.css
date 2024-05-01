@@ -54,7 +54,7 @@
 }
 
 .title {
-  color: var(--confirm-toast-msg-color);
+  color: var(--confirm-toast-text-color);
   font-weight: bold;
   margin: 0;
 }
@@ -200,7 +200,7 @@
 .light {
   --confirm-toast-box-shadow: 0 0 10px 2px #4343434c;
   --confirm-toast-bg: white;
-  --confirm-toast-msg-color: black;
+  --confirm-toast-text-color: black;
   --confirm-toast-icon-color: crimson;
   --confirm-toast-btn-yes-color: seagreen;
   --confirm-toast-btn-no-color: red;
@@ -215,7 +215,7 @@
 .dark {
   --confirm-toast-box-shadow: 0 0 10px 2px #4343434c;
   --confirm-toast-bg: #232323;
-  --confirm-toast-msg-color: white;
+  --confirm-toast-text-color: white;
   --confirm-toast-icon-color: crimson;
   --confirm-toast-btn-yes-color: seagreen;
   --confirm-toast-btn-no-color: red;
@@ -230,7 +230,7 @@
 .snow {
   --confirm-toast-box-shadow: 0 0 10px 2px #4343434c;
   --confirm-toast-bg: #eaf1fd;
-  --confirm-toast-msg-color: #5077be;
+  --confirm-toast-text-color: #5077be;
   --confirm-toast-icon-color: #3c598e;
   --confirm-toast-btn-yes-color: #233453;
   --confirm-toast-btn-no-color: #233453;
@@ -245,7 +245,7 @@
 .lilac {
   --confirm-toast-box-shadow: 0 0 10px 2px #4343434c;
   --confirm-toast-bg: #f5ebfa;
-  --confirm-toast-msg-color: black;
+  --confirm-toast-text-color: black;
   --confirm-toast-icon-color: #ad5bd6;
   --confirm-toast-btn-yes-color: #9e3ccf;
   --confirm-toast-btn-no-color: #9e3ccf;
