@@ -63,10 +63,10 @@
   background: none;
   border: none;
   padding: 0;
+  border-radius: 4px;
 
   @media (hover: hover) {
     &:focus {
-      border-radius: 4px;
       outline: 2px solid black;
     }
   }
