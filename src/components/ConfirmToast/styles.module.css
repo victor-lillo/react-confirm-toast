@@ -134,25 +134,39 @@
 .bottom-left {
   bottom: 12px;
   left: 12px;
-  animation: toast-in-left 0.7s;
 }
 
 .bottom-right {
   bottom: 12px;
   right: 12px;
-  animation: toast-in-right 0.7s;
 }
 
 .top-right {
   top: 12px;
   right: 12px;
-  animation: toast-in-right 0.7s;
 }
 
 .top-left {
   top: 12px;
   left: 12px;
-  animation: toast-in-left 0.7s;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .bottom-left {
+    animation: toast-in-left 0.7s;
+  }
+
+  .bottom-right {
+    animation: toast-in-right 0.7s;
+  }
+
+  .top-right {
+    animation: toast-in-right 0.7s;
+  }
+
+  .top-left {
+    animation: toast-in-left 0.7s;
+  }
 }
 
 @keyframes toast-in-right {
