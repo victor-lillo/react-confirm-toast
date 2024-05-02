@@ -61,20 +61,22 @@ import { ConfirmToast } from 'react-confirm-toast'
 
 For this purpose, there are some **custom properties** that you can override, passing a class to the `className` prop:
 
-|                Name                 | CSS rule           | Description                                                       |
-| :---------------------------------: | ------------------ | ----------------------------------------------------------------- |
-|       **--confirm-toast-bg**        | `background-color` | Background color of the confirm toast.                            |
-|   **--confirm-toast-box-shadow**    | `box-shadow`       | Box shadow of the confirm toast.                                  |
-|   **--confirm-toast-text-color**    | `color`            | Color of the message text in the confirm toast.                   |
-| **--confirm-toast-btn-close-color** | `color`            | Color of the `button-close` in the confirm toast.                 |
-|   **--confirm-toast-btn-yes-bg**    | `background-color` | Background color of the `button-yes` in the confirm toast.        |
-|  **--confirm-toast-btn-yes-color**  | `color`            | Color of the `button-yes` text in the confirm toast.              |
-|    **--confirm-toast-btn-no-bg**    | `background-color` | Background color of the `button-no` in the confirm toast.         |
-|  **--confirm-toast-btn-no-color**   | `color`            | Color of the `button-no` text in the confirm toast.               |
-|    **--confirm-toast-btn-hover**    | `filter`           | Filter value for each button's hover effect in the confirm toast. |
-|  **--confirm-toast-btn-yes-focus**  | `outline`          | Outline value for the focus effect in the `button-yes`.           |
-|  **--confirm-toast-btn-no-focus**   | `outline`          | Outline value for the focus effect in the `button-no`.            |
-| **--confirm-toast-btn-close-focus** | `outline`          | Outline value for the focus effect in the `button-close`.         |
+|                 Name                 | CSS rule           | Description                                                       |
+| :----------------------------------: | ------------------ | ----------------------------------------------------------------- |
+|        **--confirm-toast-bg**        | `background-color` | Background color of the confirm toast.                            |
+|    **--confirm-toast-box-shadow**    | `box-shadow`       | Box shadow of the confirm toast.                                  |
+|    **--confirm-toast-text-color**    | `color`            | Color of the message text in the confirm toast.                   |
+| **--confirm-toast-btn-close-color**  | `color`            | Color of the `button-close` in the confirm toast.                 |
+|    **--confirm-toast-btn-yes-bg**    | `background-color` | Background color of the `button-yes` in the confirm toast.        |
+|  **--confirm-toast-btn-yes-color**   | `color`            | Color of the `button-yes` text in the confirm toast.              |
+|    **--confirm-toast-btn-no-bg**     | `background-color` | Background color of the `button-no` in the confirm toast.         |
+|   **--confirm-toast-btn-no-color**   | `color`            | Color of the `button-no` text in the confirm toast.               |
+|    **--confirm-toast-btn-hover**     | `filter`           | Filter value for each button's hover effect in the confirm toast. |
+|  **--confirm-toast-btn-yes-focus**   | `outline`          | Outline value for the focus effect in the `button-yes`.           |
+|   **--confirm-toast-btn-no-focus**   | `outline`          | Outline value for the focus effect in the `button-no`.            |
+| **--confirm-toast-btn-close-focus**  | `outline`          | Outline value for the focus effect in the `button-close`.         |
+| **--confirm-toast-btn-no-disabled**  | `filter`           | Filter value for the disabled style in the `button-no`.           |
+| **--confirm-toast-btn-yes-disabled** | `filter`           | Filter value for the disabled style in the `button-yes`.          |
 
 ## Examples 📝
 
