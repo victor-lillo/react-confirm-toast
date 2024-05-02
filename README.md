@@ -184,6 +184,48 @@ export function Page() {
 }
 ```
 
+### Passing props to buttons
+
+If you want to pass attributes to the buttons, for example for adding a `disabled` attribute, you can use the following properties:
+
+- For `buttonYes` use the `buttonYesAttributes` property.
+- For `buttonNo` use the `buttonNoAttributes` property.
+- For `buttonClose` use the `buttonCloseAttributes` property.
+
+```jsx
+import { useState } from 'react'
+import { ConfirmToast } from './'
+
+export function Page() {
+  const [show, setShow] = useState(false)
+
+  function myFunction() {
+    alert('Done!')
+  }
+
+  const buttonAttributes = { disabled: true, 'aria-label': 'Custom Aria Label' }
+
+  return (
+    <section>
+      <h1>Page</h1>
+      <button
+        onClick={() => {
+          setShow(true)
+        }}
+      >
+        Click to open ConfirmToast
+      </button>
+      <ConfirmToast
+        buttonYesAttributes={buttonAttributes}
+        customFunction={myFunction}
+        setShowConfirmToast={setShow}
+        showConfirmToast={show}
+      />
+    </section>
+  )
+}
+```
+
 ### Using a custom theme
 
 Create a CSS class with the desired custom properties.
