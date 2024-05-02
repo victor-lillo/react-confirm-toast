@@ -75,7 +75,7 @@
       outline: var(--confirm-toast-btn-close-focus);
     }
 
-    &:hover {
+    &:hover:not([disabled]) {
       filter: brightness(1.3);
     }
   }
@@ -92,7 +92,7 @@
   border-radius: 6px;
 
   @media (hover: hover) {
-    &:hover {
+    &:hover:not([disabled]) {
       filter: var(--confirm-toast-btn-hover);
     }
   }
