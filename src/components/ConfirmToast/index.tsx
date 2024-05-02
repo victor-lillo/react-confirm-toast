@@ -7,10 +7,10 @@ type HTMLButtonAttributes = ComponentProps<'button'>
 
 export interface ConfirmToastProps {
   asModal?: boolean
-  buttonCloseAttributes: HTMLButtonAttributes
-  buttonNoAttributes: HTMLButtonAttributes
+  buttonCloseAttributes?: HTMLButtonAttributes
+  buttonNoAttributes?: HTMLButtonAttributes
   buttonNoText?: string
-  buttonYesAttributes: HTMLButtonAttributes
+  buttonYesAttributes?: HTMLButtonAttributes
   buttonYesText?: string
   className?: string
   customFunction: () => void
