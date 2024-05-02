@@ -1,11 +1,16 @@
-import { useEffect, useRef } from 'react'
+import { ComponentProps, useEffect, useRef } from 'react'
 import clsx from 'clsx'
 import { CloseIcon } from '../CloseIcon'
 import styles from './styles.module.css'
 
+type HTMLButtonAttributes = ComponentProps<'button'>
+
 export interface ConfirmToastProps {
   asModal?: boolean
+  buttonCloseAttributes: HTMLButtonAttributes
+  buttonNoAttributes: HTMLButtonAttributes
   buttonNoText?: string
+  buttonYesAttributes: HTMLButtonAttributes
   buttonYesText?: string
   className?: string
   customFunction: () => void
@@ -19,7 +24,10 @@ export interface ConfirmToastProps {
 
 export function ConfirmToast({
   asModal = false,
+  buttonCloseAttributes,
+  buttonNoAttributes,
   buttonNoText = 'Cancel',
+  buttonYesAttributes,
   buttonYesText = 'Ok',
   className,
   customFunction,
@@ -87,6 +95,7 @@ export function ConfirmToast({
             <button
               className={styles['button-close']}
               onClick={() => setShowConfirmToast(false)}
+              {...buttonCloseAttributes}
             >
               <CloseIcon />
             </button>
@@ -100,12 +109,14 @@ export function ConfirmToast({
               customFunction()
               setShowConfirmToast(false)
             }}
+            {...buttonYesAttributes}
           >
             {buttonYesText}
           </button>
           <button
             className={`${styles.button} ${styles['button--no']}`}
             onClick={() => setShowConfirmToast(false)}
+            {...buttonNoAttributes}
           >
             {buttonNoText}
           </button>
