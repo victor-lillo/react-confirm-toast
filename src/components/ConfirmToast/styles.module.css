@@ -102,6 +102,11 @@
   color: var(--confirm-toast-btn-yes-color);
   background-color: var(--confirm-toast-btn-yes-bg);
 
+  &[disabled] {
+    cursor: not-allowed;
+    filter: var(--confirm-toast-btn-yes-disabled);
+  }
+
   @media (hover: hover) {
     &:focus {
       outline: var(--confirm-toast-btn-yes-focus);
@@ -112,6 +117,11 @@
 .button--no {
   color: var(--confirm-toast-btn-no-color);
   background-color: var(--confirm-toast-btn-no-bg);
+
+  &[disabled] {
+    cursor: not-allowed;
+    filter: var(--confirm-toast-btn-no-disabled);
+  }
 
   @media (hover: hover) {
     &:focus {
@@ -222,6 +232,8 @@
   --confirm-toast-btn-yes-focus: 2px solid black;
   --confirm-toast-btn-no-focus: 2px solid black;
   --confirm-toast-btn-close-focus: 2px solid black;
+  --confirm-toast-btn-no-disabled: opacity(0.7);
+  --confirm-toast-btn-yes-disabled: opacity(0.7);
 }
 
 .dark {
@@ -237,6 +249,8 @@
   --confirm-toast-btn-yes-focus: 2px solid #bbb;
   --confirm-toast-btn-no-focus: 2px solid #bbb;
   --confirm-toast-btn-close-focus: 2px solid #bbb;
+  --confirm-toast-btn-no-disabled: opacity(0.7);
+  --confirm-toast-btn-yes-disabled: opacity(0.7);
 }
 
 .snow {
@@ -252,6 +266,8 @@
   --confirm-toast-btn-yes-focus: 2px solid black;
   --confirm-toast-btn-no-focus: 2px solid black;
   --confirm-toast-btn-close-focus: 2px solid black;
+  --confirm-toast-btn-no-disabled: opacity(0.7);
+  --confirm-toast-btn-yes-disabled: opacity(0.7);
 }
 
 .lilac {
@@ -267,4 +283,6 @@
   --confirm-toast-btn-yes-focus: 2px solid black;
   --confirm-toast-btn-no-focus: 2px solid black;
   --confirm-toast-btn-close-focus: 2px solid black;
+  --confirm-toast-btn-no-disabled: opacity(0.7);
+  --confirm-toast-btn-yes-disabled: opacity(0.7);
 }
