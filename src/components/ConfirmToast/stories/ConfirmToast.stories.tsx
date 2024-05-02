@@ -24,7 +24,7 @@ type Story = StoryObj<typeof ConfirmToast>
 
 const Template: Story = {
   render: (args) => {
-    const [open, setOpen] = useState(true)
+    const [open, setOpen] = useState(false)
     return (
       <>
         <button onClick={() => setOpen(true)}>Click to open!</button>
