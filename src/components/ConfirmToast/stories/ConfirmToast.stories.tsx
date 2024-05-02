@@ -24,7 +24,7 @@ type Story = StoryObj<typeof ConfirmToast>
 
 const Template: Story = {
   render: (args) => {
-    const [open, setOpen] = useState(false)
+    const [open, setOpen] = useState(true)
     return (
       <>
         <button onClick={() => setOpen(true)}>Click to open!</button>
@@ -67,4 +67,12 @@ import './custom-class.css'
 export const CustomClass: Story = {
   ...Template,
   args: { className: 'custom-confirm-toast-theme' },
+}
+
+export const AttributesPassing: Story = {
+  ...Template,
+  args: {
+    buttonYesAttributes: { disabled: true, 'aria-label': 'Custom Aria Label' },
+    buttonYesText: "I'm disabled",
+  },
 }
