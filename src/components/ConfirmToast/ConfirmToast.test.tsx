@@ -26,7 +26,7 @@ describe('ConfirmToast test:', () => {
     )
   })
 
-  it('should render & pass toasText', () => {
+  it('should render & pass toastText', () => {
     render(
       <ConfirmToast
         showConfirmToast={MOCK_STATES.open}
