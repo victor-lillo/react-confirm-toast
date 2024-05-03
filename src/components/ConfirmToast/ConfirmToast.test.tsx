@@ -26,7 +26,7 @@ describe('ConfirmToast test:', () => {
     )
   })
 
-  it('should render label', () => {
+  it('should render & pass toasText', () => {
     render(
       <ConfirmToast
         showConfirmToast={MOCK_STATES.open}
@@ -38,7 +38,7 @@ describe('ConfirmToast test:', () => {
     screen.getByText('Testing')
   })
 
-  it('should call setState on buttonClose click', () => {
+  it('should call setState & not customFunction on buttonClose click', () => {
     render(
       <ConfirmToast
         showConfirmToast={MOCK_STATES.open}
@@ -58,7 +58,7 @@ describe('ConfirmToast test:', () => {
     expect(MOCK_SETSTATE).toHaveBeenCalledTimes(1)
   })
 
-  it('should call customFunction on buttonYes click', () => {
+  it('should call customFunction & setState on buttonYes click', () => {
     render(
       <ConfirmToast
         showConfirmToast={MOCK_STATES.open}
