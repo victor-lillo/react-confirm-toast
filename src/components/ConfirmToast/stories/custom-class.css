@@ -11,4 +11,6 @@
   --confirm-toast-btn-yes-focus: 2px solid orange;
   --confirm-toast-btn-no-focus: 2px solid orange;
   --confirm-toast-btn-close-focus: 2px solid red;
+  --confirm-toast-btn-no-disabled: opacity(0.6);
+  --confirm-toast-btn-yes-disabled: opacity(0.6);
 }
