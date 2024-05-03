@@ -238,7 +238,7 @@ Create a CSS class with the desired custom properties.
   --confirm-toast-bg: aquamarine;
   --confirm-toast-box-shadow: 0 0 1px 4px purple;
   --confirm-toast-text-color: purple;
-  --confirm-toast-btn-close-color: black;
+  --confirm-toast-icon-color: black;
   --confirm-toast-btn-yes-bg: green;
   --confirm-toast-btn-yes-color: lightgreen;
   --confirm-toast-btn-no-bg: yellow;
@@ -247,6 +247,8 @@ Create a CSS class with the desired custom properties.
   --confirm-toast-btn-yes-focus: 2px solid orange;
   --confirm-toast-btn-no-focus: 2px solid orange;
   --confirm-toast-btn-close-focus: 2px solid red;
+  --confirm-toast-btn-no-disabled: opacity(0.6);
+  --confirm-toast-btn-yes-disabled: opacity(0.6);
 }
 ```
 
