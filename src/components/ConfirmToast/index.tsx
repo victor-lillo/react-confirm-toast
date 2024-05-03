@@ -3,7 +3,9 @@ import clsx from 'clsx'
 import { CloseIcon } from '../CloseIcon'
 import styles from './styles.module.css'
 
-type HTMLButtonAttributes = ComponentProps<'button'>
+type HTMLButtonAttributes = ComponentProps<'button'> & {
+  [key: `data-${string}`]: string
+}
 
 export interface ConfirmToastProps {
   asModal?: boolean
