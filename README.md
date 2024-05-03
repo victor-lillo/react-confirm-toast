@@ -8,25 +8,17 @@ Check the [documentation web](https://react-confirm-toast-docs.vercel.app/) for 
 
 ## Installation 🚀
 
-Install using npm:
+This package is in the [npm registry](https://www.npmjs.com/package/react-confirm-toast), so you can install it with your preferred dependency manager.
+
+For example, with `npm`, you can run the following command:
 
 ```sh
 npm install react-confirm-toast
 ```
 
-Install using yarn:
-
-```sh
-yarn add react-confirm-toast
-```
-
-## Usage 🎮
+## Requirements 🔍
 
 [React](https://www.npmjs.com/package/react) and [React-dom](https://www.npmjs.com/package/react-dom) are peer dependencies. Your project needs to have them installed in order to use this confirm toast.
-
-```jsx
-import { ConfirmToast } from 'react-confirm-toast'
-```
 
 ## Customization 🎨
 
