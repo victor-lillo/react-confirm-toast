@@ -30,6 +30,19 @@ npm install react-confirm-toast
 
 [React](https://www.npmjs.com/package/react) and [React-dom](https://www.npmjs.com/package/react-dom) are peer dependencies. Your project needs to have them installed in order to use this confirm toast.
 
+## Component structure 🧱
+
+This component is divided in 4 elements with standardized naming:
+
+- **text**: as it seems, is the toast text.
+- **buttonClose**: the close icon button.
+- **buttonYes**: the accept button.
+- **buttonNo**: the decline button.
+
+![Component image](./doc/component.png)
+
+This naming is maintained in all React and custom properties.
+
 ## Properties ⚙️
 
 |           Name            |                                Value                                 |           Default            | Required | Description                                                                                             |
