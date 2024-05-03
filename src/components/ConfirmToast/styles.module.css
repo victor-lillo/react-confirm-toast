@@ -286,3 +286,13 @@
   --confirm-toast-btn-no-disabled: opacity(0.7);
   --confirm-toast-btn-yes-disabled: opacity(0.7);
 }
+
+.visually-hidden {
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
