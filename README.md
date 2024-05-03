@@ -6,6 +6,16 @@ Creates a toast notification which allows you to confirm or reject the execution
 
 Check the [documentation web](https://react-confirm-toast-docs.vercel.app/) for a live demo.
 
+## Features 🎯
+
+- 💬 **Modal or not:** use it as you prefer.
+- 📱 **Responsive:** dynamically scale according to viewport.
+- 🧩 **Typed:** fully typed for enhanced development experience.
+- 🚀 **Performant:** optimized to be fast.
+- 🌈 **Accessible:** designed and conceived to leave no one behind.
+- 🖱 **Mouse, keyboard and gesture friendly:** click out the modal, click the close button or press `ESC` to close it.
+- 🕵🏽 **Customizable:** change the **texts**, choose among the 4 available **themes** or create your own, change the **position**, hide the close icon, and much more.
+
 ## Installation 🚀
 
 This package is in the [npm registry](https://www.npmjs.com/package/react-confirm-toast), so you can install it with your preferred dependency manager.
@@ -19,16 +29,6 @@ npm install react-confirm-toast
 ## Requirements 🔍
 
 [React](https://www.npmjs.com/package/react) and [React-dom](https://www.npmjs.com/package/react-dom) are peer dependencies. Your project needs to have them installed in order to use this confirm toast.
-
-## Customization 🎨
-
-`ConfirmToast` is highly customizable, you can:
-
-- Change **theme** among the 4 available, or creating a custom one.
-- Use the toast **as a modal** (in the center of the viewport) or not.
-- Change the **position** of the toast.
-- Change toast and button **texts**.
-- Hide or show the **close icon**.
 
 ## Properties ⚙️
 
