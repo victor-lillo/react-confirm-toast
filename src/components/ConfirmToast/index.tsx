@@ -7,6 +7,7 @@ type HTMLButtonAttributes = ComponentProps<'button'>
 
 export interface ConfirmToastProps {
   asModal?: boolean
+  buttonCloseA11y?: string
   buttonCloseAttributes?: HTMLButtonAttributes
   buttonNoAttributes?: HTMLButtonAttributes
   buttonNoText?: string
@@ -24,6 +25,7 @@ export interface ConfirmToastProps {
 
 export function ConfirmToast({
   asModal = false,
+  buttonCloseA11y = 'Close modal',
   buttonCloseAttributes,
   buttonNoAttributes,
   buttonNoText = 'Cancel',
@@ -98,6 +100,7 @@ export function ConfirmToast({
               {...buttonCloseAttributes}
             >
               <CloseIcon />
+              <p className={styles['visually-hidden']}>{buttonCloseA11y}</p>
             </button>
           )}
         </div>
