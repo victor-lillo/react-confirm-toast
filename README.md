@@ -314,7 +314,7 @@ Also, there are some **custom properties** that have been renamed:
 | `--confirm-toast-msg-color`  |   `--confirm-toast-text-color`    |
 | `--confirm-toast-icon-color` | `--confirm-toast-btn-close-color` |
 
-### New attributes
+### New required attributes
 
 In this version, the component doesn't control its own state. This decision has been made to increase the flexibility of the component and to enable its programmatic use.
 
