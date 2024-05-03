@@ -58,6 +58,26 @@ describe('ConfirmToast test:', () => {
     expect(MOCK_SETSTATE).toHaveBeenCalledTimes(1)
   })
 
+  it('should call setState & not customFunction on buttonNo click', () => {
+    render(
+      <ConfirmToast
+        showConfirmToast={MOCK_STATES.open}
+        setShowConfirmToast={MOCK_SETSTATE}
+        customFunction={CUSTOM_FUNCTION_MOCK}
+        toastText='Testing'
+        buttonNoAttributes={{ 'data-testid': 'no' }}
+      />
+    )
+
+    expect(CUSTOM_FUNCTION_MOCK).toHaveBeenCalledTimes(0)
+    expect(MOCK_SETSTATE).toHaveBeenCalledTimes(0)
+
+    fireEvent.click(screen.getByTestId('no'))
+
+    expect(CUSTOM_FUNCTION_MOCK).toHaveBeenCalledTimes(0)
+    expect(MOCK_SETSTATE).toHaveBeenCalledTimes(1)
+  })
+
   it('should call customFunction & setState on buttonYes click', () => {
     render(
       <ConfirmToast
