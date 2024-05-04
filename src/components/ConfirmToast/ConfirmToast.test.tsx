@@ -135,4 +135,27 @@ describe('ConfirmToast test:', () => {
     expect(CUSTOM_FUNCTION_MOCK).toHaveBeenCalledTimes(0)
     expect(MOCK_SETSTATE).toHaveBeenCalledTimes(0)
   })
+
+  it('should call setState & not customFunction on ESC key press', () => {
+    render(
+      <ConfirmToast
+        customFunction={CUSTOM_FUNCTION_MOCK}
+        setShowConfirmToast={MOCK_SETSTATE}
+        showConfirmToast={MOCK_STATES.open}
+      />
+    )
+
+    expect(CUSTOM_FUNCTION_MOCK).toHaveBeenCalledTimes(0)
+    expect(MOCK_SETSTATE).toHaveBeenCalledTimes(0)
+
+    fireEvent.keyDown(screen.getByRole('dialog'), {
+      key: 'Escape',
+      code: 'Escape',
+      keyCode: 27,
+      charCode: 27,
+    })
+
+    expect(CUSTOM_FUNCTION_MOCK).toHaveBeenCalledTimes(0)
+    expect(MOCK_SETSTATE).toHaveBeenCalledTimes(1)
+  })
 })
