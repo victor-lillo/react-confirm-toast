@@ -46,7 +46,7 @@
   flex-direction: column;
   background-color: var(--confirm-toast-bg);
   padding: 1rem;
-  gap: 1rem;
+  gap: 0.8rem;
 }
 
 .title-container {
