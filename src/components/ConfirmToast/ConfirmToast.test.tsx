@@ -38,6 +38,24 @@ describe('ConfirmToast test:', () => {
     screen.getByText('Testing')
   })
 
+  it('should pass attributes to buttonYes, buttonNo & buttonClose', () => {
+    render(
+      <ConfirmToast
+        showConfirmToast={MOCK_STATES.open}
+        setShowConfirmToast={MOCK_SETSTATE}
+        customFunction={CUSTOM_FUNCTION_MOCK}
+        toastText='Testing'
+        buttonCloseAttributes={{ 'data-testid': 'close' }}
+        buttonYesAttributes={{ 'data-testid': 'yes' }}
+        buttonNoAttributes={{ 'data-testid': 'no' }}
+      />
+    )
+
+    screen.getByTestId('close')
+    screen.getByTestId('yes')
+    screen.getByTestId('no')
+  })
+
   it('should call setState & not customFunction on buttonClose click', () => {
     render(
       <ConfirmToast
