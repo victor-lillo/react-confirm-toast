@@ -19,9 +19,9 @@ describe('ConfirmToast test:', () => {
   it('should render component', () => {
     render(
       <ConfirmToast
-        showConfirmToast={MOCK_STATES.open}
-        setShowConfirmToast={MOCK_SETSTATE}
         customFunction={CUSTOM_FUNCTION_MOCK}
+        setShowConfirmToast={MOCK_SETSTATE}
+        showConfirmToast={MOCK_STATES.open}
       />
     )
   })
@@ -29,9 +29,9 @@ describe('ConfirmToast test:', () => {
   it('should render & pass toastText', () => {
     render(
       <ConfirmToast
-        showConfirmToast={MOCK_STATES.open}
-        setShowConfirmToast={MOCK_SETSTATE}
         customFunction={CUSTOM_FUNCTION_MOCK}
+        setShowConfirmToast={MOCK_SETSTATE}
+        showConfirmToast={MOCK_STATES.open}
         toastText='Testing'
       />
     )
@@ -41,13 +41,13 @@ describe('ConfirmToast test:', () => {
   it('should pass attributes to buttonYes, buttonNo & buttonClose', () => {
     render(
       <ConfirmToast
-        showConfirmToast={MOCK_STATES.open}
-        setShowConfirmToast={MOCK_SETSTATE}
-        customFunction={CUSTOM_FUNCTION_MOCK}
-        toastText='Testing'
         buttonCloseAttributes={{ 'data-testid': 'close' }}
-        buttonYesAttributes={{ 'data-testid': 'yes' }}
         buttonNoAttributes={{ 'data-testid': 'no' }}
+        buttonYesAttributes={{ 'data-testid': 'yes' }}
+        customFunction={CUSTOM_FUNCTION_MOCK}
+        setShowConfirmToast={MOCK_SETSTATE}
+        showConfirmToast={MOCK_STATES.open}
+        toastText='Testing'
       />
     )
 
@@ -59,11 +59,11 @@ describe('ConfirmToast test:', () => {
   it('should call setState & not customFunction on buttonClose click', () => {
     render(
       <ConfirmToast
-        showConfirmToast={MOCK_STATES.open}
-        setShowConfirmToast={MOCK_SETSTATE}
-        customFunction={CUSTOM_FUNCTION_MOCK}
-        toastText='Testing'
         buttonCloseAttributes={{ 'data-testid': 'close' }}
+        customFunction={CUSTOM_FUNCTION_MOCK}
+        setShowConfirmToast={MOCK_SETSTATE}
+        showConfirmToast={MOCK_STATES.open}
+        toastText='Testing'
       />
     )
 
@@ -79,11 +79,11 @@ describe('ConfirmToast test:', () => {
   it('should call setState & not customFunction on buttonNo click', () => {
     render(
       <ConfirmToast
-        showConfirmToast={MOCK_STATES.open}
-        setShowConfirmToast={MOCK_SETSTATE}
-        customFunction={CUSTOM_FUNCTION_MOCK}
-        toastText='Testing'
         buttonNoAttributes={{ 'data-testid': 'no' }}
+        customFunction={CUSTOM_FUNCTION_MOCK}
+        setShowConfirmToast={MOCK_SETSTATE}
+        showConfirmToast={MOCK_STATES.open}
+        toastText='Testing'
       />
     )
 
@@ -99,11 +99,11 @@ describe('ConfirmToast test:', () => {
   it('should call customFunction & setState on buttonYes click', () => {
     render(
       <ConfirmToast
-        showConfirmToast={MOCK_STATES.open}
-        setShowConfirmToast={MOCK_SETSTATE}
-        customFunction={CUSTOM_FUNCTION_MOCK}
-        toastText='Testing'
         buttonYesAttributes={{ 'data-testid': 'yes' }}
+        customFunction={CUSTOM_FUNCTION_MOCK}
+        setShowConfirmToast={MOCK_SETSTATE}
+        showConfirmToast={MOCK_STATES.open}
+        toastText='Testing'
       />
     )
 
@@ -119,11 +119,11 @@ describe('ConfirmToast test:', () => {
   it('should not call customFunction & setState on disabled buttonYes click', () => {
     render(
       <ConfirmToast
-        showConfirmToast={MOCK_STATES.open}
-        setShowConfirmToast={MOCK_SETSTATE}
-        customFunction={CUSTOM_FUNCTION_MOCK}
-        toastText='Testing'
         buttonYesAttributes={{ 'data-testid': 'yes', disabled: true }}
+        customFunction={CUSTOM_FUNCTION_MOCK}
+        setShowConfirmToast={MOCK_SETSTATE}
+        showConfirmToast={MOCK_STATES.open}
+        toastText='Testing'
       />
     )
 
