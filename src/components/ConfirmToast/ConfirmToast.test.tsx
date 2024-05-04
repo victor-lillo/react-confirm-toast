@@ -107,8 +107,8 @@ describe('ConfirmToast test:', () => {
       />
     )
 
-    expect(MOCK_SETSTATE).toHaveBeenCalledTimes(0)
     expect(CUSTOM_FUNCTION_MOCK).toHaveBeenCalledTimes(0)
+    expect(MOCK_SETSTATE).toHaveBeenCalledTimes(0)
 
     fireEvent.click(screen.getByTestId('yes'))
 
@@ -127,8 +127,8 @@ describe('ConfirmToast test:', () => {
       />
     )
 
-    expect(MOCK_SETSTATE).toHaveBeenCalledTimes(0)
     expect(CUSTOM_FUNCTION_MOCK).toHaveBeenCalledTimes(0)
+    expect(MOCK_SETSTATE).toHaveBeenCalledTimes(0)
 
     fireEvent.click(screen.getByTestId('yes'))
 
