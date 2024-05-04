@@ -47,7 +47,6 @@ describe('ConfirmToast test:', () => {
         customFunction={CUSTOM_FUNCTION_MOCK}
         setShowConfirmToast={MOCK_SETSTATE}
         showConfirmToast={MOCK_STATES.open}
-        toastText='Testing'
       />
     )
 
@@ -63,7 +62,6 @@ describe('ConfirmToast test:', () => {
         customFunction={CUSTOM_FUNCTION_MOCK}
         setShowConfirmToast={MOCK_SETSTATE}
         showConfirmToast={MOCK_STATES.open}
-        toastText='Testing'
       />
     )
 
@@ -83,7 +81,6 @@ describe('ConfirmToast test:', () => {
         customFunction={CUSTOM_FUNCTION_MOCK}
         setShowConfirmToast={MOCK_SETSTATE}
         showConfirmToast={MOCK_STATES.open}
-        toastText='Testing'
       />
     )
 
@@ -103,7 +100,6 @@ describe('ConfirmToast test:', () => {
         customFunction={CUSTOM_FUNCTION_MOCK}
         setShowConfirmToast={MOCK_SETSTATE}
         showConfirmToast={MOCK_STATES.open}
-        toastText='Testing'
       />
     )
 
@@ -123,7 +119,6 @@ describe('ConfirmToast test:', () => {
         customFunction={CUSTOM_FUNCTION_MOCK}
         setShowConfirmToast={MOCK_SETSTATE}
         showConfirmToast={MOCK_STATES.open}
-        toastText='Testing'
       />
     )
 
