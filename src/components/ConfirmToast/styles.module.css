@@ -54,8 +54,9 @@
 }
 
 .title {
-  color: var(--confirm-toast-text-color);
+  font-size: 1.1rem;
   font-weight: bold;
+  color: var(--confirm-toast-text-color);
   margin: 0;
 }
 
@@ -86,6 +87,7 @@
 }
 
 .button {
+  font-size: 1rem;
   font-weight: bold;
   padding: 0.4rem 0.6rem;
   border: none;
