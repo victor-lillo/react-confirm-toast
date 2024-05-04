@@ -58,7 +58,7 @@ export default defineConfig({
     css: true,
     coverage: {
       include: ['src/components'],
-      exclude: ['**/*.stories.ts'],
+      exclude: ['**/*.stories.tsx'],
     },
   },
 })
