@@ -153,4 +153,42 @@ describe('ConfirmToast test:', () => {
     expect(CUSTOM_FUNCTION_MOCK).toHaveBeenCalledTimes(0)
     expect(MOCK_SETSTATE).toHaveBeenCalledTimes(1)
   })
+
+  it('should call setState & not customFunction on click out the dialog [asModal = true]', () => {
+    render(
+      <ConfirmToast
+        customFunction={CUSTOM_FUNCTION_MOCK}
+        setShowConfirmToast={MOCK_SETSTATE}
+        showConfirmToast={MOCK_STATES.open}
+        asModal={true}
+      />
+    )
+
+    expect(CUSTOM_FUNCTION_MOCK).toHaveBeenCalledTimes(0)
+    expect(MOCK_SETSTATE).toHaveBeenCalledTimes(0)
+
+    fireEvent.click(screen.getByRole('dialog'))
+
+    expect(CUSTOM_FUNCTION_MOCK).toHaveBeenCalledTimes(0)
+    expect(MOCK_SETSTATE).toHaveBeenCalledTimes(1)
+  })
+
+  it('should call setState & not customFunction on click out the dialog [asModal = false]', () => {
+    render(
+      <ConfirmToast
+        customFunction={CUSTOM_FUNCTION_MOCK}
+        setShowConfirmToast={MOCK_SETSTATE}
+        showConfirmToast={MOCK_STATES.open}
+        asModal={false}
+      />
+    )
+
+    expect(CUSTOM_FUNCTION_MOCK).toHaveBeenCalledTimes(0)
+    expect(MOCK_SETSTATE).toHaveBeenCalledTimes(0)
+
+    fireEvent.click(document)
+
+    expect(CUSTOM_FUNCTION_MOCK).toHaveBeenCalledTimes(0)
+    expect(MOCK_SETSTATE).toHaveBeenCalledTimes(1)
+  })
 })
