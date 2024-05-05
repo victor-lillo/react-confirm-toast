@@ -59,6 +59,7 @@ export default defineConfig({
     coverage: {
       include: ['src/components'],
       exclude: ['**/*.stories.tsx'],
+      reporter: ['text'],
     },
   },
 })
