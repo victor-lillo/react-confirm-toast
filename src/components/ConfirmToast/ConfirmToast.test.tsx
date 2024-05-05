@@ -38,6 +38,21 @@ describe('ConfirmToast test:', () => {
     screen.getByText('Testing')
   })
 
+  it('should not have open attr when showConfirmToast is false', () => {
+    render(
+      <ConfirmToast
+        buttonCloseAttributes={{ 'data-testid': 'close' }}
+        customFunction={CUSTOM_FUNCTION_MOCK}
+        setShowConfirmToast={MOCK_SETSTATE}
+        showConfirmToast={MOCK_STATES.close}
+      />
+    )
+
+    const hasOpenAttr = document.querySelector('dialog')?.hasAttribute('open')
+
+    expect(hasOpenAttr).toBeFalsy()
+  })
+
   it('should pass attributes to buttonYes, buttonNo & buttonClose', () => {
     render(
       <ConfirmToast
