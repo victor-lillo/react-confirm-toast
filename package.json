@@ -1,6 +1,6 @@
 {
   "name": "react-confirm-toast",
-  "version": "2.0.0-beta.1",
+  "version": "2.0.0",
   "description": "Creates a toast dialog which allows you to confirm or reject the execution of a function",
   "type": "module",
   "author": {
