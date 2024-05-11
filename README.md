@@ -1,3 +1,5 @@
+> ♻️ New version `2.0.0` released. Please read the new documentation.
+
 # react-confirm-toast
 
 > A light and customizable confirm toast component.
