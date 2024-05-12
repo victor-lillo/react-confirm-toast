@@ -1,0 +1,300 @@
+.dialog {
+  --ease: cubic-bezier(0.25, 0, 0.3, 1);
+
+  padding: 0;
+  border: none;
+  transition: opacity 0.5s;
+  border-radius: 8px;
+  contain: paint;
+  box-shadow: var(--confirm-toast-box-shadow);
+}
+
+.dialog--modal {
+  display: block;
+  inset: 0;
+}
+
+.dialog--modal:not([open]) {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.dialog--modal::backdrop {
+  background: #0000005b;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .dialog--modal {
+    animation: scale-down 0.5s var(--ease);
+  }
+
+  .dialog--modal[open] {
+    animation: slide-in-up 0.5s var(--ease);
+  }
+}
+
+.container,
+.title-container,
+.buttons-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  font-family: system-ui;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 1rem;
+  background-color: var(--confirm-toast-bg);
+}
+
+.title-container {
+  gap: 0.9rem;
+}
+
+.title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--confirm-toast-text-color);
+  margin: 0;
+}
+
+.button-close {
+  background: none;
+  border: none;
+  padding: 0;
+  border-radius: 4px;
+  color: var(--confirm-toast-btn-close-color);
+
+  & svg {
+    vertical-align: middle;
+  }
+
+  @media (hover: hover) {
+    &:focus {
+      outline: var(--confirm-toast-btn-close-focus);
+    }
+
+    &:hover:not([disabled]) {
+      filter: brightness(1.3);
+    }
+  }
+}
+
+.buttons-container {
+  gap: 0.6rem;
+}
+
+.button {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.4rem 0.6rem;
+  border: none;
+  border-radius: 6px;
+
+  @media (hover: hover) {
+    &:hover:not([disabled]) {
+      filter: var(--confirm-toast-btn-hover);
+    }
+  }
+}
+
+.button--yes {
+  color: var(--confirm-toast-btn-yes-color);
+  background-color: var(--confirm-toast-btn-yes-bg);
+
+  &[disabled] {
+    cursor: not-allowed;
+    filter: var(--confirm-toast-btn-yes-disabled);
+  }
+
+  @media (hover: hover) {
+    &:focus {
+      outline: var(--confirm-toast-btn-yes-focus);
+    }
+  }
+}
+
+.button--no {
+  color: var(--confirm-toast-btn-no-color);
+  background-color: var(--confirm-toast-btn-no-bg);
+
+  &[disabled] {
+    cursor: not-allowed;
+    filter: var(--confirm-toast-btn-no-disabled);
+  }
+
+  @media (hover: hover) {
+    &:focus {
+      outline: var(--confirm-toast-btn-no-focus);
+    }
+  }
+}
+
+.top-left,
+.top-right,
+.bottom-left,
+.bottom-right {
+  position: fixed;
+  margin: unset;
+  inset: auto;
+}
+
+.bottom-left {
+  bottom: 12px;
+  left: 12px;
+}
+
+.bottom-right {
+  bottom: 12px;
+  right: 12px;
+}
+
+.top-right {
+  top: 12px;
+  right: 12px;
+}
+
+.top-left {
+  top: 12px;
+  left: 12px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .bottom-left {
+    animation: toast-in-left 0.7s;
+  }
+
+  .bottom-right {
+    animation: toast-in-right 0.7s;
+  }
+
+  .top-right {
+    animation: toast-in-right 0.7s;
+  }
+
+  .top-left {
+    animation: toast-in-left 0.7s;
+  }
+}
+
+@keyframes toast-in-right {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes toast-in-left {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-up {
+  0% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes scale-up {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes scale-down {
+  to {
+    transform: scale(0.75);
+  }
+}
+
+.light {
+  --confirm-toast-bg: white;
+  --confirm-toast-box-shadow: 0 0 10px 2px #4343434c;
+  --confirm-toast-text-color: black;
+  --confirm-toast-btn-close-color: crimson;
+  --confirm-toast-btn-yes-bg: var(--confirm-toast-bg);
+  --confirm-toast-btn-yes-color: seagreen;
+  --confirm-toast-btn-no-bg: var(--confirm-toast-bg);
+  --confirm-toast-btn-no-color: red;
+  --confirm-toast-btn-hover: brightness(0.9);
+  --confirm-toast-btn-yes-focus: 2px solid black;
+  --confirm-toast-btn-no-focus: 2px solid black;
+  --confirm-toast-btn-close-focus: 2px solid black;
+  --confirm-toast-btn-no-disabled: opacity(0.7);
+  --confirm-toast-btn-yes-disabled: opacity(0.7);
+}
+
+.dark {
+  --confirm-toast-bg: #232323;
+  --confirm-toast-box-shadow: 0 0 10px 2px #4343434c;
+  --confirm-toast-text-color: white;
+  --confirm-toast-btn-close-color: crimson;
+  --confirm-toast-btn-yes-bg: var(--confirm-toast-bg);
+  --confirm-toast-btn-yes-color: seagreen;
+  --confirm-toast-btn-no-bg: var(--confirm-toast-bg);
+  --confirm-toast-btn-no-color: red;
+  --confirm-toast-btn-hover: brightness(1.4);
+  --confirm-toast-btn-yes-focus: 2px solid #bbb;
+  --confirm-toast-btn-no-focus: 2px solid #bbb;
+  --confirm-toast-btn-close-focus: 2px solid #bbb;
+  --confirm-toast-btn-no-disabled: opacity(0.7);
+  --confirm-toast-btn-yes-disabled: opacity(0.7);
+}
+
+.snow {
+  --confirm-toast-bg: #eaf1fd;
+  --confirm-toast-box-shadow: 0 0 10px 2px #4343434c;
+  --confirm-toast-text-color: #5077be;
+  --confirm-toast-btn-close-color: #3c598e;
+  --confirm-toast-btn-yes-bg: #d1dffa;
+  --confirm-toast-btn-yes-color: #233453;
+  --confirm-toast-btn-no-bg: #d1dffa;
+  --confirm-toast-btn-no-color: #233453;
+  --confirm-toast-btn-hover: brightness(1.15);
+  --confirm-toast-btn-yes-focus: 2px solid black;
+  --confirm-toast-btn-no-focus: 2px solid black;
+  --confirm-toast-btn-close-focus: 2px solid black;
+  --confirm-toast-btn-no-disabled: opacity(0.7);
+  --confirm-toast-btn-yes-disabled: opacity(0.7);
+}
+
+.lilac {
+  --confirm-toast-bg: #f5ebfa;
+  --confirm-toast-box-shadow: 0 0 10px 2px #4343434c;
+  --confirm-toast-text-color: black;
+  --confirm-toast-btn-close-color: #ad5bd6;
+  --confirm-toast-btn-yes-bg: var(--confirm-toast-bg);
+  --confirm-toast-btn-yes-color: #9e3ccf;
+  --confirm-toast-btn-no-bg: var(--confirm-toast-bg);
+  --confirm-toast-btn-no-color: #9e3ccf;
+  --confirm-toast-btn-hover: brightness(1.05);
+  --confirm-toast-btn-yes-focus: 2px solid black;
+  --confirm-toast-btn-no-focus: 2px solid black;
+  --confirm-toast-btn-close-focus: 2px solid black;
+  --confirm-toast-btn-no-disabled: opacity(0.7);
+  --confirm-toast-btn-yes-disabled: opacity(0.7);
+}
+
+.visually-hidden {
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
