@@ -27,13 +27,11 @@
     "coverage": "vitest run --coverage",
     "prepublishOnly": "vitest run && npm run build"
   },
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
   "exports": "./dist/main.js",
+  "types": "dist/main.d.ts",
   "files": [
     "dist"
   ],
-  "types": "dist/index.d.ts",
   "peerDependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
