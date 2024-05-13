@@ -34,24 +34,6 @@
     "dist"
   ],
   "types": "dist/index.d.ts",
-  "keywords": [
-    "react",
-    "react-toast",
-    "react-component",
-    "react component",
-    "notifications",
-    "toast",
-    "modal",
-    "popup",
-    "dialog",
-    "alert",
-    "confirm",
-    "react confirm",
-    "react confirm toast",
-    "react modal",
-    "react popup",
-    "react popup confirm"
-  ],
   "peerDependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
@@ -95,5 +77,23 @@
     "vite-plugin-dts": "3.9.1",
     "vite-plugin-lib-inject-css": "2.1.0",
     "vitest": "1.6.0"
-  }
+  },
+  "keywords": [
+    "react",
+    "react-toast",
+    "react-component",
+    "react component",
+    "notifications",
+    "toast",
+    "modal",
+    "popup",
+    "dialog",
+    "alert",
+    "confirm",
+    "react confirm",
+    "react confirm toast",
+    "react modal",
+    "react popup",
+    "react popup confirm"
+  ]
 }
