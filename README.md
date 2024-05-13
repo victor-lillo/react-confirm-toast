@@ -92,7 +92,7 @@ This is a minimum working example, using the 3 required props:
 
 ```jsx
 import { useState } from 'react'
-import { ConfirmToast } from '../ConfirmToast'
+import { ConfirmToast } from 'react-confirm-toast'
 
 export function Page() {
   const [show, setShow] = useState(false)
@@ -125,7 +125,7 @@ export function Page() {
 
 ```jsx
 import { useState } from 'react'
-import { ConfirmToast } from '../ConfirmToast'
+import { ConfirmToast } from 'react-confirm-toast'
 
 export function Page() {
   const [show, setShow] = useState(false)
@@ -159,7 +159,7 @@ export function Page() {
 
 ```jsx
 import { useState } from 'react'
-import { ConfirmToast } from '../ConfirmToast'
+import { ConfirmToast } from 'react-confirm-toast'
 
 export function Page() {
   const [show, setShow] = useState(false)
@@ -202,7 +202,7 @@ If you want to pass attributes to the buttons, for example for adding a `disable
 
 ```jsx
 import { useState } from 'react'
-import { ConfirmToast } from './'
+import { ConfirmToast } from 'react-confirm-toast'
 
 export function Page() {
   const [show, setShow] = useState(false)
@@ -262,7 +262,7 @@ And pass it to the `className` property.
 ```jsx
 import 'custom-theme.css'
 import { useState } from 'react'
-import { ConfirmToast } from '../ConfirmToast'
+import { ConfirmToast } from 'react-confirm-toast'
 
 export function Page() {
   const [show, setShow] = useState(false)
