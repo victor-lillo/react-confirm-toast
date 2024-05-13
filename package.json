@@ -1,6 +1,6 @@
 {
   "name": "react-confirm-toast",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Creates a toast dialog which allows you to confirm or reject the execution of a function",
   "type": "module",
   "author": {
@@ -27,30 +27,10 @@
     "coverage": "vitest run --coverage",
     "prepublishOnly": "vitest run && npm run build"
   },
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
   "exports": "./dist/main.js",
+  "types": "dist/main.d.ts",
   "files": [
     "dist"
-  ],
-  "types": "dist/index.d.ts",
-  "keywords": [
-    "react",
-    "react-toast",
-    "react-component",
-    "react component",
-    "notifications",
-    "toast",
-    "modal",
-    "popup",
-    "dialog",
-    "alert",
-    "confirm",
-    "react confirm",
-    "react confirm toast",
-    "react modal",
-    "react popup",
-    "react popup confirm"
   ],
   "peerDependencies": {
     "react": "^18.3.1",
@@ -95,5 +75,23 @@
     "vite-plugin-dts": "3.9.1",
     "vite-plugin-lib-inject-css": "2.1.0",
     "vitest": "1.6.0"
-  }
+  },
+  "keywords": [
+    "react",
+    "react-toast",
+    "react-component",
+    "react component",
+    "notifications",
+    "toast",
+    "modal",
+    "popup",
+    "dialog",
+    "alert",
+    "confirm",
+    "react confirm",
+    "react confirm toast",
+    "react modal",
+    "react popup",
+    "react popup confirm"
+  ]
 }
